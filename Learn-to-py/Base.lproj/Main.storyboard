@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,6 +33,9 @@
                                 <state key="normal" title="Bucles For">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gae-cn-Baq" kind="show" id="U02-2h-tSI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyb-eV-cKX">
                                 <rect key="frame" x="348" y="84" width="162" height="88"/>
@@ -40,6 +43,9 @@
                                 <color key="backgroundColor" name="PyBlue"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <state key="normal" title="Bucles While"/>
+                                <connections>
+                                    <segue destination="G3z-sA-mSX" kind="show" id="W5j-FY-uS1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbI-Bi-ZeE">
                                 <rect key="frame" x="156" y="203" width="162" height="88"/>
@@ -47,6 +53,9 @@
                                 <color key="backgroundColor" name="PyBlue"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <state key="normal" title="Práctica"/>
+                                <connections>
+                                    <segue destination="dFj-Zp-cp3" kind="show" id="hAZ-c6-4C6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65M-d2-xOR">
                                 <rect key="frame" x="348" y="202" width="162" height="88"/>
@@ -80,19 +89,143 @@
             </objects>
             <point key="canvasLocation" x="132.68365817091455" y="100"/>
         </scene>
-        <!--View Controller-->
+        <!--Information-->
         <scene sceneID="1CE-WJ-FMm">
             <objects>
-                <viewController id="9Af-4G-kDa" sceneMemberID="viewController">
+                <viewController title="Information" id="9Af-4G-kDa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Glk-6O-Wpj">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAj-oV-zgU">
+                                <rect key="frame" x="-5" y="12" width="30" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="PyYellow"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ygB-95-Vd7" kind="unwind" unwindAction="unwind:" id="Lum-Dn-kDi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jAA-JE-BB9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
                     </view>
                     <navigationItem key="navigationItem" id="5rC-eR-68b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WwX-iy-890" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ygB-95-Vd7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="1015"/>
+        </scene>
+        <!--While-->
+        <scene sceneID="276-pr-9ut">
+            <objects>
+                <viewController title="While" id="G3z-sA-mSX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8zK-CF-RE6">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyQ-bM-lXf">
+                                <rect key="frame" x="-5" y="12" width="30" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="PyYellow"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="SQP-ZH-Qyw" kind="unwind" unwindAction="unwind:" id="1Xm-s8-Ozt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7T-QI-Ny6"/>
+                        <color key="backgroundColor" name="Background"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pW6-Mn-8iM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHs-2a-eBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SQP-ZH-Qyw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="-738"/>
+        </scene>
+        <!--For-->
+        <scene sceneID="Xpz-gX-Wtu">
+            <objects>
+                <viewController title="For" id="gae-cn-Baq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbg-ev-hL7">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owk-l0-syS">
+                                <rect key="frame" x="-5" y="12" width="30" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="PyYellow"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mFW-KT-cy9" kind="unwind" unwindAction="unwind:" id="uei-Wa-Evg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gQB-Vo-ebR"/>
+                        <color key="backgroundColor" name="Background"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="han-mA-oBN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37x-lR-Uam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mFW-KT-cy9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="-737"/>
+        </scene>
+        <!--Practica-->
+        <scene sceneID="2Qb-ni-wna">
+            <objects>
+                <viewController title="Practica" id="dFj-Zp-cp3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roe-AH-SH6">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Br5-dE-w8D">
+                                <rect key="frame" x="-5" y="12" width="30" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="PyYellow"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dUx-5q-fxY" kind="unwind" unwindAction="unwind:" id="bv9-Xh-sUP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eHu-d2-Rvo"/>
+                        <color key="backgroundColor" name="Background"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eUJ-c4-vLV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8a-Qh-lPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dUx-5q-fxY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="936" y="100"/>
         </scene>
@@ -110,9 +243,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
