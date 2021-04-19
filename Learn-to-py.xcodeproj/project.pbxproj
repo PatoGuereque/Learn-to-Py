@@ -28,6 +28,11 @@
 		44C37AE2262D0CE100E7BD0C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD3262D0CE100E7BD0C /* Roboto-Bold.ttf */; };
 		44C37AE3262D0CE100E7BD0C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD4262D0CE100E7BD0C /* Roboto-Thin.ttf */; };
 		44C37AE4262D0CE100E7BD0C /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD5262D0CE100E7BD0C /* Roboto-Black.ttf */; };
+		9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF0262D24750051D9E4 /* CodeTemplate.swift */; };
+		9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF3262D26AE0051D9E4 /* Variable.swift */; };
+		9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF6262D3CD10051D9E4 /* Step.swift */; };
+		9C925AFA262D51480051D9E4 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF9262D51480051D9E4 /* Logic.swift */; };
+		9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AFC262DCD490051D9E4 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		44C37AD3262D0CE100E7BD0C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		44C37AD4262D0CE100E7BD0C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		44C37AD5262D0CE100E7BD0C /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		9C925AF0262D24750051D9E4 /* CodeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTemplate.swift; sourceTree = "<group>"; };
+		9C925AF3262D26AE0051D9E4 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		9C925AF6262D3CD10051D9E4 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		9C925AF9262D51480051D9E4 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		9C925AFC262DCD490051D9E4 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,11 @@
 				44C37AAE262CFC8000E7BD0C /* LaunchScreen.storyboard */,
 				44C37AB1262CFC8000E7BD0C /* Info.plist */,
 				44C37AA7262CFC7F00E7BD0C /* ViewController.swift */,
+				9C925AF0262D24750051D9E4 /* CodeTemplate.swift */,
+				9C925AF3262D26AE0051D9E4 /* Variable.swift */,
+				9C925AF6262D3CD10051D9E4 /* Step.swift */,
+				9C925AF9262D51480051D9E4 /* Logic.swift */,
+				9C925AFC262DCD490051D9E4 /* Enums.swift */,
 			);
 			path = "Learn-to-py";
 			sourceTree = "<group>";
@@ -221,9 +236,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */,
 				44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */,
 				44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */,
+				9C925AFA262D51480051D9E4 /* Logic.swift in Sources */,
 				44C37AA6262CFC7F00E7BD0C /* SceneDelegate.swift in Sources */,
+				9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */,
+				9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */,
+				9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
