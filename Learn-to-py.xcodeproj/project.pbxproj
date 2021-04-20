@@ -28,6 +28,9 @@
 		44C37AE2262D0CE100E7BD0C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD3262D0CE100E7BD0C /* Roboto-Bold.ttf */; };
 		44C37AE3262D0CE100E7BD0C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD4262D0CE100E7BD0C /* Roboto-Thin.ttf */; };
 		44C37AE4262D0CE100E7BD0C /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD5262D0CE100E7BD0C /* Roboto-Black.ttf */; };
+		7321377D262F58060092EA5A /* popUpEditar_i.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7321377C262F58060092EA5A /* popUpEditar_i.swift */; };
+		73213783262F5E7F0092EA5A /* popUpEditarSeleccionCodigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213782262F5E7F0092EA5A /* popUpEditarSeleccionCodigo.swift */; };
+		73213787262F628E0092EA5A /* popUpEditarIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213786262F628E0092EA5A /* popUpEditarIterable.swift */; };
 		9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF0262D24750051D9E4 /* CodeTemplate.swift */; };
 		9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF3262D26AE0051D9E4 /* Variable.swift */; };
 		9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF6262D3CD10051D9E4 /* Step.swift */; };
@@ -59,6 +62,9 @@
 		44C37AD3262D0CE100E7BD0C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		44C37AD4262D0CE100E7BD0C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		44C37AD5262D0CE100E7BD0C /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		7321377C262F58060092EA5A /* popUpEditar_i.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpEditar_i.swift; sourceTree = "<group>"; };
+		73213782262F5E7F0092EA5A /* popUpEditarSeleccionCodigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpEditarSeleccionCodigo.swift; sourceTree = "<group>"; };
+		73213786262F628E0092EA5A /* popUpEditarIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpEditarIterable.swift; sourceTree = "<group>"; };
 		9C925AF0262D24750051D9E4 /* CodeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTemplate.swift; sourceTree = "<group>"; };
 		9C925AF3262D26AE0051D9E4 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		9C925AF6262D3CD10051D9E4 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 				44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */,
 				44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */,
 				44C37AA9262CFC7F00E7BD0C /* Main.storyboard */,
+				73213786262F628E0092EA5A /* popUpEditarIterable.swift */,
+				73213782262F5E7F0092EA5A /* popUpEditarSeleccionCodigo.swift */,
+				7321377C262F58060092EA5A /* popUpEditar_i.swift */,
 				44C37AAC262CFC8000E7BD0C /* Assets.xcassets */,
 				44C37AAE262CFC8000E7BD0C /* LaunchScreen.storyboard */,
 				44C37AB1262CFC8000E7BD0C /* Info.plist */,
@@ -239,9 +248,12 @@
 				9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */,
 				44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */,
 				44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */,
+				73213787262F628E0092EA5A /* popUpEditarIterable.swift in Sources */,
 				9C925AFA262D51480051D9E4 /* Logic.swift in Sources */,
 				44C37AA6262CFC7F00E7BD0C /* SceneDelegate.swift in Sources */,
+				7321377D262F58060092EA5A /* popUpEditar_i.swift in Sources */,
 				9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */,
+				73213783262F5E7F0092EA5A /* popUpEditarSeleccionCodigo.swift in Sources */,
 				9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */,
 				9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */,
 			);
