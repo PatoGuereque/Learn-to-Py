@@ -9,9 +9,16 @@ import UIKit
 
 class PopUpEditarSeleccionCodigo: UIViewController {
 
+    @IBOutlet weak var selectCod: UIButton!
+    @IBOutlet var opcionSeleccionada: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        opcionSeleccionada.forEach{(btn) in
+            btn.isHidden = true
+            btn.alpha = 0
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -29,4 +36,22 @@ class PopUpEditarSeleccionCodigo: UIViewController {
     @IBAction func guardarSeleccionCodigo(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func selectCodigo(_ sender: UIButton) {
+        opcionSeleccionada.forEach { (btn) in
+            UIView.animate(withDuration: 0.6){
+                btn.isHidden = !btn.isHidden
+                btn.alpha = btn.alpha == 0 ? 1 : 0
+                btn.layoutIfNeeded()
+            }
+        }
+    }
+    @IBAction func opcionSleccionada(_ sender: UIButton) {
+        if let btnLbl = sender.titleLabel?.text{
+            print(btnLbl)
+            sender.titleLabel?.text = selectCod.titleLabel?.text
+            selectCod.titleLabel?.text = btnLbl
+        }
+    }
+    
 }
