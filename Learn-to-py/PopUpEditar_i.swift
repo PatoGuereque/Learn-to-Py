@@ -7,7 +7,7 @@
 
 import UIKit
 
-class popUpEditar_i: UIViewController {
+class PopUpEditar_i: UIViewController {
 
     @IBOutlet weak var tfNombreVar: UITextField!
     @IBOutlet weak var lb_i: UILabel!

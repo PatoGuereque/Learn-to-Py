@@ -1,5 +1,5 @@
 //
-//  popUpEditarSeleccionCodigo.swift
+//  popUpEditarIterable.swift
 //  Learn-to-py
 //
 //  Created by user189355 on 4/20/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class popUpEditarSeleccionCodigo: UIViewController {
+class PopUpEditarIterable: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,9 @@ class popUpEditarSeleccionCodigo: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    @IBAction func guardarSeleccionCodigo(_ sender: UIButton) {
+    @IBAction func guardarIterable(_ sender: UIButton) {
+        
         dismiss(animated: true, completion: nil)
     }
+    
 }

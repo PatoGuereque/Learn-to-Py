@@ -280,7 +280,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
         <!--editar i-->
         <scene sceneID="kTp-eH-oGK">
             <objects>
-                <viewController title="editar i" modalPresentationStyle="overCurrentContext" id="cU5-bt-k03" customClass="popUpEditar_i" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="editar i" modalPresentationStyle="overCurrentContext" id="cU5-bt-k03" customClass="PopUpEditar_i" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jz4-k1-rSK">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,7 +344,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
         <!--Seleccion Codigo-->
         <scene sceneID="ovs-Kg-5VQ">
             <objects>
-                <viewController title="Seleccion Codigo" modalPresentationStyle="overCurrentContext" id="mo0-iG-VXa" customClass="popUpEditarSeleccionCodigo" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Seleccion Codigo" modalPresentationStyle="overCurrentContext" id="mo0-iG-VXa" customClass="PopUpEditarSeleccionCodigo" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gJt-9s-gSf">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,7 +384,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
         <!--For-->
         <scene sceneID="rZa-1R-f83">
             <objects>
-                <viewController title="For" modalPresentationStyle="overCurrentContext" id="Mc6-Qy-KiR" customClass="popUpEditarIterable" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="For" modalPresentationStyle="overCurrentContext" id="Mc6-Qy-KiR" customClass="PopUpEditarIterable" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zmf-fI-T8f">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
