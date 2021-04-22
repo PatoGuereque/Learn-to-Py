@@ -238,7 +238,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-h2-wLF">
-                                        <rect key="frame" x="8" y="102" width="289" height="38"/>
+                                        <rect key="frame" x="8" y="84" width="289" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iterable = range(1,10,1)" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAp-1e-96E">
@@ -261,7 +261,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pZw-rx-eUW">
-                                        <rect key="frame" x="7" y="172" width="317" height="128"/>
+                                        <rect key="frame" x="8" y="158" width="317" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1N-Ab-TLb">
@@ -302,9 +302,9 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQu-aJ-8Ea">
-                                                <rect key="frame" x="183" y="7" width="11" height="20"/>
+                                                <rect key="frame" x="188" y="7" width="11" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
                                                 <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
