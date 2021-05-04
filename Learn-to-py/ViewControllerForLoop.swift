@@ -17,7 +17,7 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
     var steps: [Step] = []
     var step = 0
     var iterableType = 0 // 0: array, 1: range
-    var snippet = CodeSnippet.isPair
+    var snippet = codeSnippetsArr[0]
     var iterator = Variable(name: "i", value: "0", type: Int.self)
     var iterable = Variable(name: "iterable", value: "1 2 3", type: Array<Int>.self)
     

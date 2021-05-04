@@ -20,13 +20,7 @@ class CodeTemplate {
                 let iteratorCopy = iterator.copy()
                 iteratorCopy.value = i
                 steps.append(Step(log: steps.count == 0 ? "" : steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 0))
-
-                switch snippet {
-                case .isPair:
-                    Logic.shared.isPair(steps: &steps, variables: [iteratorCopy, iterable], number: i)
-                case .print:
-                    Logic.shared.print(steps: &steps, variables: [iteratorCopy, iterable], number: i)
-                }
+                snippet.doLogic(steps: &steps, variables: [iteratorCopy, iterable], number: i)
             }
         }
         
