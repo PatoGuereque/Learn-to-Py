@@ -20,6 +20,15 @@ class IfElseSnippet: CodeSnippet {
         }
     }
     
+    func generateCode() -> [NSAttributedString] {
+        var lines: [NSAttributedString] = []
+        lines.append(NSAttributedString(string: "   if i % 2 == 0"))
+        lines.append(NSAttributedString(string: "       print(f' {i} es par')"))
+        lines.append(NSAttributedString(string: "   else"))
+        lines.append(NSAttributedString(string: "       print(f' {i} es impar')"))
+        return lines
+    }
+    
     func getName() -> String {
         return "if-else"
     }

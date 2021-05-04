@@ -11,6 +11,8 @@ protocol CodeSnippet {
     
     func doLogic(steps: inout [Step], variables: [Variable], number: Int)
     
+    func generateCode() -> [NSAttributedString] 
+    
     func getName() -> String
     
 }

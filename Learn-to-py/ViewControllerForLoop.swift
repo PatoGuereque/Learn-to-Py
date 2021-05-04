@@ -20,6 +20,9 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
     var snippet = codeSnippetsArr[0]
     var iterator = Variable(name: "i", value: "0", type: Int.self)
     var iterable = Variable(name: "iterable", value: "1 2 3", type: Array<Int>.self)
+    @IBOutlet weak var snippetText: UILabel!
+    @IBOutlet weak var codeHighlight: UIView!
+    @IBOutlet weak var console: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,11 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
     func refresh() {
         step = 0
         steps = CodeTemplate.shared.forLoop(iterator: iterator, iterable: iterable, snippet: snippet)
+        var start: [NSAttributedString] = [NSAttributedString(string: "for i in range:")]
+        start.append(contentsOf: snippet.generateCode())
+        let lines: NSAttributedString = start.joined(with: "\n")
+        snippetText.attributedText = lines
+        self.snippetText.sizeToFit()
         
         // Log steps for debugging purposes.
         for step in steps {
@@ -53,12 +61,17 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
             step = max(step - 1, 0)
         }
         
+        UIView.animate(withDuration: 1) {
+            self.codeHighlight.frame.origin.y = CGFloat(7 + 18 * self.steps[self.step].line)
+        }
+        
         print("\(steps[step].line!) - ", terminator: "")
         for variable in steps[step].variables {
             print("\(variable.name!): \(variable.value!), ", terminator:"")
         }
 
         print("\n\(steps[step].log!)")
+        console.text = steps[step].log!
     }
     
     // MARK: - AutoUpdate

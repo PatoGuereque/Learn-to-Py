@@ -14,6 +14,12 @@ class PrintSnippet: CodeSnippet {
         steps.append(Step(log: last.log + "\(number)\n", variables: variables, line: 1))
     }
     
+    func generateCode() -> [NSAttributedString] {
+        var lines: [NSAttributedString] = []
+        lines.append(NSAttributedString(string: "   print(f' {i} ')"))
+        return lines
+    }
+    
     func getName() -> String {
         return "print"
     }

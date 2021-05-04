@@ -212,7 +212,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="variable" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yO-K9-j6y">
                                                 <rect key="frame" x="294" y="12" width="15" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="lapiz"/>
+                                                <state key="normal" image="Lapiz"/>
                                                 <connections>
                                                     <segue destination="cU5-bt-k03" kind="presentation" id="QJg-gs-o3i"/>
                                                 </connections>
@@ -224,115 +224,29 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                         <rect key="frame" x="26" y="211" width="317" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="for" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-5y-kEV">
-                                                <rect key="frame" x="9" y="7" width="33" height="21"/>
+                                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3d-7F-nyk">
+                                                <rect key="frame" x="0.0" y="0.0" width="317" height="23"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.23137254901960785" green="0.40784313725490196" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="i" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20N-MC-Cpo">
-                                                <rect key="frame" x="53" y="7" width="11" height="21"/>
+                                                <color key="backgroundColor" red="1" green="0.96774819730951311" blue="0.42255107098116473" alpha="0.31281887755102039" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-5y-kEV">
+                                                <rect key="frame" x="9" y="7" width="300" height="23"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.86274509803921573" green="0.37254901960784315" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRY-oH-JDH">
-                                                <rect key="frame" x="73" y="7" width="22" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iterable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCA-BG-WiV">
-                                                <rect key="frame" x="102" y="7" width="87" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.2627450980392157" green="0.72941176470588232" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQu-aJ-8Ea">
-                                                <rect key="frame" x="188" y="7" width="11" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="if" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RI-jz-RTp">
-                                                <rect key="frame" x="50" y="31" width="22" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="i" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjL-fu-6MA">
-                                                <rect key="frame" x="79" y="31" width="11" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.95686274509803915" green="0.13725490196078433" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="% 2 == 0:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpW-Ew-WTS">
-                                                <rect key="frame" x="98" y="31" width="98" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="print(f' {" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y47-ca-uFt">
-                                                <rect key="frame" x="72" y="54" width="108" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="i" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3y4-Mi-Ocw">
-                                                <rect key="frame" x="177" y="54" width="11" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.95686274509803915" green="0.13725490196078433" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="} es par')" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvA-sl-eKC">
-                                                <rect key="frame" x="185" y="54" width="108" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="else:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5N-bq-eFK">
-                                                <rect key="frame" x="52" y="77" width="54" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="print(f' {" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kiv-Bs-kPW">
-                                                <rect key="frame" x="72" y="97" width="108" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="} es impar')" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19G-VE-w5H">
-                                                <rect key="frame" x="185" y="97" width="130" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.19607843137254902" green="0.35686274509803922" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="i" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zo-bh-Mb4">
-                                                <rect key="frame" x="177" y="97" width="11" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
-                                                <color key="textColor" red="0.95686274509803915" green="0.13725490196078433" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="for">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="16" name="PTMono-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="snippet" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1N-Ab-TLb">
                                                 <rect key="frame" x="294" y="8" width="15" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="lapiz"/>
+                                                <state key="normal" image="Lapiz"/>
                                                 <connections>
                                                     <segue destination="mo0-iG-VXa" kind="presentation" id="gVy-UL-vGX"/>
                                                 </connections>
@@ -370,7 +284,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="iterable" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qw-Fz-Fhm">
                                                 <rect key="frame" x="294" y="12" width="15" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="lapiz"/>
+                                                <state key="normal" image="Lapiz"/>
                                                 <connections>
                                                     <segue destination="Mc6-Qy-KiR" kind="presentation" id="IQH-kr-gdf"/>
                                                 </connections>
@@ -427,6 +341,11 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                         <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="han-mA-oBN"/>
+                    <connections>
+                        <outlet property="codeHighlight" destination="a3d-7F-nyk" id="ILb-XS-2Yn"/>
+                        <outlet property="console" destination="sdk-v3-9yg" id="94J-gW-S5Y"/>
+                        <outlet property="snippetText" destination="ivT-5y-kEV" id="pTN-d9-DSr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37x-lR-Uam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="mFW-KT-cy9" userLabel="Exit" sceneMemberID="exit"/>
@@ -676,8 +595,8 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
         </scene>
     </scenes>
     <resources>
+        <image name="Lapiz" width="83" height="83"/>
         <image name="LogoPython" width="768" height="768"/>
-        <image name="lapiz" width="83" height="83"/>
         <namedColor name="Background">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
