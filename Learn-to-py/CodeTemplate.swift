@@ -17,14 +17,15 @@ class CodeTemplate {
         
         if let range = iterable.value as? Array<Int> {
             for i in range {
-                iterator.value = i
-                steps.append(Step(log: "", variables: [iterator, iterable], line: 0))
-                
+                let iteratorCopy = iterator.copy()
+                iteratorCopy.value = i
+                steps.append(Step(log: steps.count == 0 ? "" : steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 0))
+
                 switch snippet {
                 case .isPair:
-                    Logic.shared.isPair(steps: &steps, variables: [iterator, iterable], number: i)
+                    Logic.shared.isPair(steps: &steps, variables: [iteratorCopy, iterable], number: i)
                 case .print:
-                    Logic.shared.print(steps: &steps, variables: [iterator, iterable], number: i)
+                    Logic.shared.print(steps: &steps, variables: [iteratorCopy, iterable], number: i)
                 }
             }
         }

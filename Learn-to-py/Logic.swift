@@ -12,8 +12,8 @@ class Logic {
     
     func isPair(steps: inout [Step], variables: [Variable], number: Int) {
         let last = steps[steps.count - 1]
+        steps.append(Step(log: last.log, variables: variables, line: 1))
         if number % 2 == 0 {
-            steps.append(Step(log: last.log, variables: variables, line: 1))
             steps.append(Step(log: last.log + "\(number) es par\n", variables: variables, line: 2))
         } else {
             steps.append(Step(log: last.log, variables: variables, line: 3))
