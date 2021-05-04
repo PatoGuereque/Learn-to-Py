@@ -7,8 +7,18 @@
 
 import Foundation
 
-class Variable {
-    let name: String!
+protocol Copiable {
+    init(instance: Self)
+}
+
+extension Copiable { // Make a copy of the object to avoid pass-by-reference
+    func copy() -> Self {
+        return Self.init(instance: self)
+    }
+}
+
+class Variable: Copiable {
+    var name: String!
     var value: Any!
     
     init<T>(name: String!, value: String!, type: T.Type) {
@@ -21,5 +31,10 @@ class Variable {
         } else {
             self.value = nil
         }
+    }
+    
+    required init(instance: Variable) {
+        self.name = instance.name
+        self.value = instance.value
     }
 }

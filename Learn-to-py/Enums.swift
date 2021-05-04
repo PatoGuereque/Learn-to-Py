@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum CodeSnippet {
+enum CodeSnippet: Int {
     case isPair
     case print
 }
+
+let codeSnippetNames = ["if-else", "print"]

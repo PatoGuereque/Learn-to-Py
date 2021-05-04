@@ -7,18 +7,13 @@
 
 import UIKit
 
-class PopUpEditar_i: UIViewController {
-
-    @IBOutlet weak var tfNombreVar: UITextField!
-    @IBOutlet weak var lb_i: UILabel!
-    
+class EditVariable: UIViewController {
+    @IBOutlet weak var name: UITextField!
+    var delegate: AutoUpdate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -30,8 +25,10 @@ class PopUpEditar_i: UIViewController {
     }
     */
 
-    @IBAction func guardarNombre(_ sender: UIButton) {
-        
-        dismiss(animated: true, completion: nil)
+    @IBAction func onExit(_ sender: UITapGestureRecognizer) {
+        if let name = name.text {
+            delegate.update(name: name)
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
