@@ -359,6 +359,34 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
             </objects>
             <point key="canvasLocation" x="132.68365817091455" y="-738.39999999999998"/>
         </scene>
+        <!--Results View Controller-->
+        <scene sceneID="f7a-vm-oYt">
+            <objects>
+                <viewController id="7Wt-CB-8Xn" customClass="ResultsViewController" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8hu-rC-aWY">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultados de intentos previos:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzB-II-wXk">
+                                <rect key="frame" x="122" y="33" width="423" height="309"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tPG-A2-f6x"/>
+                        <color key="backgroundColor" name="Background"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1kP-Bu-n9W"/>
+                    <connections>
+                        <outlet property="lbResults" destination="DzB-II-wXk" id="Iz6-1H-8io"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRg-5F-Rl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809.14542728635683" y="1816.8"/>
+        </scene>
         <!--Practica-->
         <scene sceneID="2Qb-ni-wna">
             <objects>
@@ -383,6 +411,28 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                     <segue destination="dUx-5q-fxY" kind="unwind" unwindAction="unwind:" id="bv9-Xh-sUP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSO-mx-45R">
+                                <rect key="frame" x="80" y="133" width="200" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="PyYellow"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                <state key="normal" title="Ver resultados">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Wt-CB-8Xn" kind="show" id="lMM-IY-ktm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSg-l8-XcQ">
+                                <rect key="frame" x="398" y="133" width="206" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="PyBlue"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                <state key="normal" title="Iniciar examen"/>
+                                <connections>
+                                    <segue destination="sAD-7P-RoF" kind="show" id="m1k-Jo-9uD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eHu-d2-Rvo"/>
                         <color key="backgroundColor" name="Background"/>
@@ -392,7 +442,55 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8a-Qh-lPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="dUx-5q-fxY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="897"/>
+            <point key="canvasLocation" x="-231.63418290854574" y="896.79999999999995"/>
+        </scene>
+        <!--Exam View Controller-->
+        <scene sceneID="Ad1-0p-2ef">
+            <objects>
+                <viewController id="sAD-7P-RoF" customClass="ExamViewController" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fcE-wJ-gve">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ioz-1v-uoM">
+                                <rect key="frame" x="454" y="170" width="157" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CnN-C7-wyk">
+                                <rect key="frame" x="20" y="20" width="375" height="335"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pregunta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-du-3pE">
+                                <rect key="frame" x="407" y="48" width="250" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Su respuesta es: (correcta/incorrecta) " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wu-ji-Q8f">
+                                <rect key="frame" x="403" y="239" width="259" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TeB-94-YLV"/>
+                        <color key="backgroundColor" name="Background"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pac-6K-2eN"/>
+                    <connections>
+                        <outlet property="imgFoto" destination="CnN-C7-wyk" id="Tyr-o8-VgF"/>
+                        <outlet property="lbPregunta" destination="LDV-du-3pE" id="ktx-Fw-Qyw"/>
+                        <outlet property="lbSolucion" destination="6Wu-ji-Q8f" id="IYP-8X-Lb9"/>
+                        <outlet property="tfRespuesta" destination="ioz-1v-uoM" id="4NK-Rl-TeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPC-12-sYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.2488755622188905" y="1800.8"/>
         </scene>
         <!--EditVariable-->
         <scene sceneID="kTp-eH-oGK">
