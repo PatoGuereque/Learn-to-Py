@@ -89,7 +89,7 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
                     return
                 }
                 
-                if self.steps.count == self.step + 1{
+                if self.steps.count == self.step + 1 {
                     timer.invalidate()
                     self.isPlaying = false
                     self.playButton.setTitle("▶️", for: .normal)
