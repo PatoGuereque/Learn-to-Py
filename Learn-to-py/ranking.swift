@@ -7,6 +7,10 @@
 
 import UIKit
 
-class Ranking: NSObject {
+class Ranking: NSObject, Codable{
+    var score : Int
 
+    init(score: Int){
+        self.score = 0
+    }
 }
