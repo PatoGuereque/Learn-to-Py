@@ -11,7 +11,6 @@
 		44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D792641279B001CC861 /* IfElseSnippet.swift */; };
 		44491D7D264128ED001CC861 /* PrintSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D7C264128ED001CC861 /* PrintSnippet.swift */; };
 		44491D8126412DF5001CC861 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D8026412DF5001CC861 /* Utils.swift */; };
-		4454716726518EAB00A7B3E8 /* CodeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4454716626518EAB00A7B3E8 /* CodeColor.swift */; };
 		44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */; };
 		44C37AA6262CFC7F00E7BD0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */; };
 		44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA7262CFC7F00E7BD0C /* ViewController.swift */; };
@@ -37,6 +36,7 @@
 		4563DB68264DBF8800AFB4F8 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563DB67264DBF8800AFB4F8 /* ExamViewController.swift */; };
 		4563DB6B264DC49D00AFB4F8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563DB6A264DC49D00AFB4F8 /* Question.swift */; };
 		45EC4A332649E6CE00DB1D31 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */; };
+		45FC96A6265221F70058AF59 /* CodeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4454716626518EAB00A7B3E8 /* CodeColor.swift */; };
 		7321377D262F58060092EA5A /* EditVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7321377C262F58060092EA5A /* EditVariable.swift */; };
 		73213783262F5E7F0092EA5A /* EditSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213782262F5E7F0092EA5A /* EditSnippet.swift */; };
 		73213787262F628E0092EA5A /* EditIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213786262F628E0092EA5A /* EditIterable.swift */; };
@@ -109,7 +109,6 @@
 				9C925AF6262D3CD10051D9E4 /* Step.swift */,
 				9C925AFC262DCD490051D9E4 /* Enums.swift */,
 				44491D8026412DF5001CC861 /* Utils.swift */,
-				4454716626518EAB00A7B3E8 /* CodeColor.swift */,
 			);
 			path = interpreter;
 			sourceTree = "<group>";
@@ -147,6 +146,7 @@
 				44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */,
 				44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */,
 				44C37AA9262CFC7F00E7BD0C /* Main.storyboard */,
+				4454716626518EAB00A7B3E8 /* CodeColor.swift */,
 				4563DB6A264DC49D00AFB4F8 /* Question.swift */,
 				4563DB67264DBF8800AFB4F8 /* ExamViewController.swift */,
 				45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */,
@@ -299,6 +299,7 @@
 				9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */,
 				44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */,
 				73213783262F5E7F0092EA5A /* EditSnippet.swift in Sources */,
+				45FC96A6265221F70058AF59 /* CodeColor.swift in Sources */,
 				9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */,
 				45EC4A332649E6CE00DB1D31 /* ResultsViewController.swift in Sources */,
 				9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */,

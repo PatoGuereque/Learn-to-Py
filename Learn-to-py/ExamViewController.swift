@@ -14,19 +14,43 @@ class ExamViewController: UIViewController {
     @IBOutlet weak var lbSolucion: UILabel!
     @IBOutlet weak var imgFoto: UIImageView!
     
-    var grade = 0
+    var grade : Int!
+    var indicePregunta : Int!
     var questionList = [
-        Question(content: "¿Cuánto vale i en la tercera iteración?", answer: "3", image: UIImage(named: "Ciclo for"))
+        Question(content: "¿La variable i es par o impar en la primera iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Ciclo for")),
+        Question(content: "¿La variable i es par o impar en la segunda iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Ciclo for")),
+        Question(content: "¿La variable i es par o impar en la tercera iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Ciclo for")),
+        Question(content: "¿La variable i es par o impar en la cuarta iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Ciclo for")),
+        Question(content: "¿La variable i es par o impar en la quinta iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Ciclo for"))
     ]
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicePregunta = 0
+        grade = 0
         tfRespuesta.inputView = UIView()
-        lbPregunta.text = questionList[0].content
-        imgFoto.image = questionList[0].image
-
-        // Do any additional setup after loading the view.
+        lbPregunta.text = questionList[indicePregunta].content
+        imgFoto.image = questionList[indicePregunta].image
     }
+    
+    @IBAction func botonValidar(_ sender: UIButton) {
+        if indicePregunta < 4 {
+            if let respuestaTemporal = tfRespuesta.text {
+                if respuestaTemporal == questionList[indicePregunta].answer {
+                    lbSolucion.text = "Su respuesta es correcta"
+                    grade+=1
+                }
+                else {
+                    lbSolucion.text = "Su respuesta es incorrecta"
+                }
+                indicePregunta+=1
+                lbPregunta.text = questionList[indicePregunta].content
+                imgFoto.image = questionList[indicePregunta].image
+            }
+        }
+    }
+    
+    
     /*
     func onLabelClick() {
        var guess = tfRespuesta.text

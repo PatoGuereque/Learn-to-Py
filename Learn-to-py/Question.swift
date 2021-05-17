@@ -16,9 +16,4 @@ class Question: NSObject {
         self.answer = answer
         self.image = image
     }
-
-    //func isCorrect(guess: String) -> bool (guess==answer){
-
-    //}
-    
 }
