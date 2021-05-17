@@ -24,11 +24,11 @@ class EditSnippet: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return codeSnippetNames.count
+        return codeSnippetsArr.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return codeSnippetNames[row]
+        return codeSnippetsArr[row].getName()
     }
     
     /*
@@ -42,7 +42,7 @@ class EditSnippet: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     */
 
     @IBAction func onExit(_ sender: UITapGestureRecognizer) {
-        delegate.update(snippet: CodeSnippet(rawValue: codeSnippets.selectedRow(inComponent: 0))!)
+        delegate.update(snippet: codeSnippetsArr[codeSnippets.selectedRow(inComponent: 0)])
         dismiss(animated: true, completion: nil)
     }
 }

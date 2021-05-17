@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44491D77264126FE001CC861 /* CodeSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D76264126FE001CC861 /* CodeSnippet.swift */; };
+		44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D792641279B001CC861 /* IfElseSnippet.swift */; };
+		44491D7D264128ED001CC861 /* PrintSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D7C264128ED001CC861 /* PrintSnippet.swift */; };
+		44491D8126412DF5001CC861 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D8026412DF5001CC861 /* Utils.swift */; };
+		4454716726518EAB00A7B3E8 /* CodeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4454716626518EAB00A7B3E8 /* CodeColor.swift */; };
 		44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */; };
 		44C37AA6262CFC7F00E7BD0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */; };
 		44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA7262CFC7F00E7BD0C /* ViewController.swift */; };
@@ -35,11 +40,15 @@
 		9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF0262D24750051D9E4 /* CodeTemplate.swift */; };
 		9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF3262D26AE0051D9E4 /* Variable.swift */; };
 		9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF6262D3CD10051D9E4 /* Step.swift */; };
-		9C925AFA262D51480051D9E4 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF9262D51480051D9E4 /* Logic.swift */; };
 		9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AFC262DCD490051D9E4 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44491D76264126FE001CC861 /* CodeSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnippet.swift; sourceTree = "<group>"; };
+		44491D792641279B001CC861 /* IfElseSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfElseSnippet.swift; sourceTree = "<group>"; };
+		44491D7C264128ED001CC861 /* PrintSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSnippet.swift; sourceTree = "<group>"; };
+		44491D8026412DF5001CC861 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4454716626518EAB00A7B3E8 /* CodeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeColor.swift; sourceTree = "<group>"; };
 		44C37AA0262CFC7F00E7BD0C /* Learn-to-py.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn-to-py.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +79,6 @@
 		9C925AF0262D24750051D9E4 /* CodeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTemplate.swift; sourceTree = "<group>"; };
 		9C925AF3262D26AE0051D9E4 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		9C925AF6262D3CD10051D9E4 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		9C925AF9262D51480051D9E4 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		9C925AFC262DCD490051D9E4 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +93,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44491D732641263B001CC861 /* interpreter */ = {
+			isa = PBXGroup;
+			children = (
+				44491D75264126A2001CC861 /* snippets */,
+				9C925AF0262D24750051D9E4 /* CodeTemplate.swift */,
+				44491D76264126FE001CC861 /* CodeSnippet.swift */,
+				9C925AF3262D26AE0051D9E4 /* Variable.swift */,
+				9C925AF6262D3CD10051D9E4 /* Step.swift */,
+				9C925AFC262DCD490051D9E4 /* Enums.swift */,
+				44491D8026412DF5001CC861 /* Utils.swift */,
+				4454716626518EAB00A7B3E8 /* CodeColor.swift */,
+			);
+			path = interpreter;
+			sourceTree = "<group>";
+		};
+		44491D75264126A2001CC861 /* snippets */ = {
+			isa = PBXGroup;
+			children = (
+				44491D792641279B001CC861 /* IfElseSnippet.swift */,
+				44491D7C264128ED001CC861 /* PrintSnippet.swift */,
+			);
+			path = snippets;
+			sourceTree = "<group>";
+		};
 		44C37A97262CFC7F00E7BD0C = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +136,7 @@
 		44C37AA2262CFC7F00E7BD0C /* Learn-to-py */ = {
 			isa = PBXGroup;
 			children = (
+				44491D732641263B001CC861 /* interpreter */,
 				44C37AC4262D0CE100E7BD0C /* fonts */,
 				44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */,
 				44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */,
@@ -116,11 +149,6 @@
 				73213786262F628E0092EA5A /* EditIterable.swift */,
 				44C37AA7262CFC7F00E7BD0C /* ViewController.swift */,
 				4544BAEA262FD05800CF3ACF /* ViewControllerForLoop.swift */,
-				9C925AF0262D24750051D9E4 /* CodeTemplate.swift */,
-				9C925AF3262D26AE0051D9E4 /* Variable.swift */,
-				9C925AF6262D3CD10051D9E4 /* Step.swift */,
-				9C925AF9262D51480051D9E4 /* Logic.swift */,
-				9C925AFC262DCD490051D9E4 /* Enums.swift */,
 			);
 			path = "Learn-to-py";
 			sourceTree = "<group>";
@@ -249,13 +277,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */,
+				44491D77264126FE001CC861 /* CodeSnippet.swift in Sources */,
 				44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */,
 				44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */,
+				4454716726518EAB00A7B3E8 /* CodeColor.swift in Sources */,
 				73213787262F628E0092EA5A /* EditIterable.swift in Sources */,
-				9C925AFA262D51480051D9E4 /* Logic.swift in Sources */,
+				44491D8126412DF5001CC861 /* Utils.swift in Sources */,
+				44491D7D264128ED001CC861 /* PrintSnippet.swift in Sources */,
 				44C37AA6262CFC7F00E7BD0C /* SceneDelegate.swift in Sources */,
 				7321377D262F58060092EA5A /* EditVariable.swift in Sources */,
 				9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */,
+				44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */,
 				73213783262F5E7F0092EA5A /* EditSnippet.swift in Sources */,
 				9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */,
 				9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */,
