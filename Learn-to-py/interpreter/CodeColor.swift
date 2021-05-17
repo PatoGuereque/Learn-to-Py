@@ -17,8 +17,8 @@ extension UIColor {
 
 class CodeColor {
     
-    static var variable: [ NSAttributedString.Key: Any ] = [ .foregroundColor: UIColor.codePurple! ]
-    static var iteratorVariable: [ NSAttributedString.Key: Any ] = [ .foregroundColor: UIColor.codeGreen! ]
+    static var variable: [ NSAttributedString.Key: Any ] = [ .foregroundColor: UIColor.codeGreen! ]
+    static var iteratorVariable: [ NSAttributedString.Key: Any ] = [ .foregroundColor: UIColor.codePurple! ]
     static var syntax: [ NSAttributedString.Key: Any ] = [ .foregroundColor: UIColor.codeBlue! ]
     
 }

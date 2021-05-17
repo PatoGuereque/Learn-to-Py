@@ -20,15 +20,15 @@ class IfElseSnippet: CodeSnippet {
         }
     }
     
-    func generateCode() -> [NSAttributedString] {
+    func generateCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
         // line 1 = if i % 2 == 0:
         let line1 = NSMutableAttributedString(string: "    if ", attributes: CodeColor.syntax)
-        line1.append(NSAttributedString(string: "i", attributes: CodeColor.iteratorVariable))
+        line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
         line1.append(NSAttributedString(string: " % 2 == 0:", attributes: CodeColor.syntax))
         
         // line 2 = print(f' {i} es par')
         let line2 = NSMutableAttributedString(string: "        print(f'{", attributes: CodeColor.syntax)
-        line2.append(NSAttributedString(string: "i", attributes: CodeColor.iteratorVariable))
+        line2.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
         line2.append(NSAttributedString(string: "} es par')", attributes: CodeColor.syntax))
         
         // line 3 = else:
@@ -36,7 +36,7 @@ class IfElseSnippet: CodeSnippet {
         
         // line 4 = print(f' {i} es par')
         let line4 = NSMutableAttributedString(string: "        print(f'{", attributes: CodeColor.syntax)
-        line4.append(NSAttributedString(string: "i", attributes: CodeColor.iteratorVariable))
+        line4.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
         line4.append(NSAttributedString(string: "} es impar')", attributes: CodeColor.syntax))
                      
         return [

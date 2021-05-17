@@ -14,10 +14,11 @@ class PrintSnippet: CodeSnippet {
         steps.append(Step(log: last.log + "\(number)\n", variables: variables, line: 1))
     }
     
-    func generateCode() -> [NSAttributedString] {
-        var lines: [NSAttributedString] = []
-        lines.append(NSAttributedString(string: "   print(f' {i} ')"))
-        return lines
+    func generateCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
+        let line = NSMutableAttributedString(string: "        print(f'{", attributes: CodeColor.syntax)
+        line.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
+        line.append(NSAttributedString(string: "}')", attributes: CodeColor.syntax))
+        return [line]
     }
     
     func getName() -> String {
