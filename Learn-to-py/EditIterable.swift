@@ -9,24 +9,17 @@ import UIKit
 
 class EditIterable: UIViewController {
     @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var type: UISegmentedControl!
     @IBOutlet weak var content: UITextField!
+    var initialValue: String!
     var delegate: AutoUpdate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = initialValue
+        name.text = initialValue
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func onExit(_ sender: UITapGestureRecognizer) {
         if let name = name.text, let content = content.text {

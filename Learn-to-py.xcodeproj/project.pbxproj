@@ -37,7 +37,7 @@
 		4563DB6B264DC49D00AFB4F8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563DB6A264DC49D00AFB4F8 /* Question.swift */; };
 		45EC4A332649E6CE00DB1D31 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */; };
 		45FC96A6265221F70058AF59 /* CodeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4454716626518EAB00A7B3E8 /* CodeColor.swift */; };
-		7312D4BE265239630041A38D /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7312D4BD265239630041A38D /* Ranking.swift */; };
+		7312D4BE265239630041A38D /* ExamResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7312D4BD265239630041A38D /* ExamResult.swift */; };
 		7321377D262F58060092EA5A /* EditVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7321377C262F58060092EA5A /* EditVariable.swift */; };
 		73213783262F5E7F0092EA5A /* EditSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213782262F5E7F0092EA5A /* EditSnippet.swift */; };
 		73213787262F628E0092EA5A /* EditIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213786262F628E0092EA5A /* EditIterable.swift */; };
@@ -80,7 +80,7 @@
 		4563DB67264DBF8800AFB4F8 /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
 		4563DB6A264DC49D00AFB4F8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		7312D4BD265239630041A38D /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		7312D4BD265239630041A38D /* ExamResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamResult.swift; sourceTree = "<group>"; };
 		7321377C262F58060092EA5A /* EditVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVariable.swift; sourceTree = "<group>"; };
 		73213782262F5E7F0092EA5A /* EditSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSnippet.swift; sourceTree = "<group>"; };
 		73213786262F628E0092EA5A /* EditIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIterable.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 				4454716626518EAB00A7B3E8 /* CodeColor.swift */,
 				4563DB6A264DC49D00AFB4F8 /* Question.swift */,
 				4563DB67264DBF8800AFB4F8 /* ExamViewController.swift */,
-				7312D4BD265239630041A38D /* Ranking.swift */,
+				7312D4BD265239630041A38D /* ExamResult.swift */,
 				45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */,
 				44C37AAC262CFC8000E7BD0C /* Assets.xcassets */,
 				44C37AAE262CFC8000E7BD0C /* LaunchScreen.storyboard */,
@@ -302,7 +302,7 @@
 				9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */,
 				44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */,
 				73213783262F5E7F0092EA5A /* EditSnippet.swift in Sources */,
-				7312D4BE265239630041A38D /* Ranking.swift in Sources */,
+				7312D4BE265239630041A38D /* ExamResult.swift in Sources */,
 				45FC96A6265221F70058AF59 /* CodeColor.swift in Sources */,
 				9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */,
 				45EC4A332649E6CE00DB1D31 /* ResultsViewController.swift in Sources */,

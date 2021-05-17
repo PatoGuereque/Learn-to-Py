@@ -11,59 +11,40 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var lbResults: UILabel!
     @IBOutlet weak var table: UITableView!
-    var rank = [Ranking]()
+    var results: [ExamResult] = []
+    let url = pathURL(name: "Rank", format: "plist")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if FileManager.default.fileExists(atPath: dataFileURL().path){
-            obtenerIndiceRank()
-        }
-        // Do any additional setup after loading the view.
+        loadHistory()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rank.count
+        return results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celda")!
-        cell.textLabel?.text = String(rank[indexPath.row].score) + " / 3"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let result = results[indexPath.row]
+        
+        cell.textLabel?.text = "\(result.correctAnswers!) de \(result.questions!) correctas: \(result.grade!)%"
+        
         return cell
-    }
-    
-    func dataFileURL() -> URL {
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let pathArchivo = documentsDirectory.appendingPathComponent("Rank").appendingPathExtension("plist")
-        print(pathArchivo.path)
-        return pathArchivo
     }
     
     @IBAction func regresarView(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func obtenerIndiceRank(){
-        rank.removeAll()
-        
-        do{
-            let data = try Data.init(contentsOf: dataFileURL())
-            rank = try PropertyListDecoder().decode([Ranking].self, from: data)
-            table.reloadData()
-        }
-        catch{
-            print("Error al cargaar los datos del archivo")
+    func loadHistory() {
+        do {
+            if FileManager.default.fileExists(atPath: url.path) {
+                let data = try Data.init(contentsOf: url)
+                results = try PropertyListDecoder().decode([ExamResult].self, from: data)
+                table.reloadData()
+            }
+        } catch {
+            print(error)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
