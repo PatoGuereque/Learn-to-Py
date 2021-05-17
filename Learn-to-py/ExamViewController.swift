@@ -17,11 +17,11 @@ class ExamViewController: UIViewController {
     var grade : Int!
     var indicePregunta : Int!
     var questionList = [
-        Question(content: "¿La variable i es par o impar en la primera iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Ciclo for")),
-        Question(content: "¿La variable i es par o impar en la segunda iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Ciclo for")),
-        Question(content: "¿La variable i es par o impar en la tercera iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Ciclo for")),
-        Question(content: "¿La variable i es par o impar en la cuarta iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Ciclo for")),
-        Question(content: "¿La variable i es par o impar en la quinta iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Ciclo for"))
+        Question(content: "¿La variable i es par o impar en la tercera iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Pregunta 1")),
+        Question(content: "¿La variable i es par o impar en la cuarta iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Pregunta 2")),
+        Question(content: "¿La variable i es par o impar en la primera iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Pregunta 3")),
+        Question(content: "¿Qué valor tiene el paso de la variable iterable?", answer: "3", image: UIImage(named: "Pregunta 4")),
+        Question(content: "¿Qué valor tiene el paso de la variable iterable?", answer: "4", image: UIImage(named: "Pregunta 5"))
     ]
    
     override func viewDidLoad() {
