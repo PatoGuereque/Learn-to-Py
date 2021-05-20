@@ -60,16 +60,6 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
         let lines: NSAttributedString = start.joined(with: "\n")
         snippetText.attributedText = lines
         self.snippetText.sizeToFit()
-        
-        // Log steps for debugging purposes.
-        for step in steps {
-            print("\(step.line!) - ", terminator: "")
-            for variable in step.variables {
-                print("\(variable.name!): \(variable.value!), ", terminator:"")
-            }
-
-            print("\n\(step.log!)")
-        }
     }
     
     @IBAction func onControlClick(_ sender: UIButton) {
@@ -117,13 +107,13 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
         UIView.animate(withDuration: 0.3) {
             self.codeHighlight.frame.origin.y = CGFloat(7 + 18 * self.steps[self.step].line)
         }
-        
-        print("\(steps[step].line!) - ", terminator: "")
-        for variable in steps[step].variables {
-            print("\(variable.name!): \(variable.value!), ", terminator:"")
-        }
 
-        print("\n\(steps[step].log!)")
+        iterator = steps[step].variables[0]
+        iterable = steps[step].variables[1]
+
+        let iterableValue = iterable.value as? Array<Int>
+        iterableLabel.text = "\(iterable.name!) = [\(iterableValue!.map{String($0)}.joined(separator: ", "))]"
+        iteratorLabel.text = "\(iterator.name!) = \(iterator.value!)"
         console.text = steps[step].log!
     }
     
@@ -155,11 +145,13 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
             if button.restorationIdentifier == "variable" {
                 let view = segue.destination as! EditVariable
                 view.delegate = self
+                view.initialValue = iterator.name
             }
             
             if button.restorationIdentifier == "iterable" {
                 let view = segue.destination as! EditIterable
                 view.delegate = self
+                view.initialValue = iterable.name
             }
             
             if button.restorationIdentifier == "snippet" {

@@ -22,3 +22,10 @@ extension Sequence where Iterator.Element == NSAttributedString {
         return self.joined(with: NSAttributedString(string: separator))
     }
 }
+
+func pathURL(name: String, format: String) -> URL {
+    let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let path = dir.appendingPathComponent(name).appendingPathExtension(format)
+    
+    return path
+}

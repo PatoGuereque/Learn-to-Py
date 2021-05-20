@@ -9,10 +9,14 @@ import UIKit
 
 class EditVariable: UIViewController {
     @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var label: UILabel!
+    var initialValue: String!
     var delegate: AutoUpdate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        name.text = initialValue
+        label.text = initialValue
     }
 
     /*
