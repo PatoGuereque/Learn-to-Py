@@ -18,5 +18,13 @@ class ViewController: UIViewController {
     @IBAction func unwind(_ seg: UIStoryboardSegue) {
         
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
+    }
 }
 
