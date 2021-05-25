@@ -8,3 +8,5 @@
 import Foundation
 
 let codeSnippetsArr: [CodeSnippet] = [IfElseSnippet(), PrintSnippet()]
+
+let variableNameMaxLength = 4
