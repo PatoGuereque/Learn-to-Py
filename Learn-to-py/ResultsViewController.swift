@@ -27,7 +27,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         let result = results[indexPath.row]
         
-        cell.textLabel?.text = "\(result.correctAnswers!) de \(result.questions!) correctas: \(result.grade!)%"
+        cell.textLabel?.text = "\(result.correctAnswers!) de \(result.questions!) correctas: \(result.grade!). Fecha de presentación: \(result.date!)"
         
         return cell
     }
