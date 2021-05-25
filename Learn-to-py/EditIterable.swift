@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditIterable: UIViewController {
+class EditIterable: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var type: UISegmentedControl!
@@ -19,6 +19,12 @@ class EditIterable: UIViewController {
         super.viewDidLoad()
         label.text = initialValue
         name.text = initialValue
+        name.delegate = self
+    }
+    
+    // MARK: - UITextFieldDelegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return range.location < variableNameMaxLength
     }
     
     @IBAction func onExit(_ sender: UITapGestureRecognizer) {
