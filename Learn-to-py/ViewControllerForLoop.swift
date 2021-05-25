@@ -19,7 +19,7 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
     var iterableType = 0 // 0: array, 1: range
     var snippet = codeSnippetsArr[0]
     var iterator = Variable(name: "i", value: "0", type: Int.self)
-    var iterable = Variable(name: "iterable", value: "1 2 3", type: Array<Int>.self)
+    var iterable = Variable(name: "iter", value: "1 2 3", type: Array<Int>.self)
     var isPlaying = false
     @IBOutlet weak var snippetText: UILabel!
     @IBOutlet weak var codeHighlight: UIView!
@@ -45,9 +45,7 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
             self.codeHighlight.frame.origin.y = CGFloat(7)
         }
         
-        iteratorLabel.text = "\(iterator.name!) = \(iterator.value!)"
-        let iterableValue = iterable.value as? Array<Int>
-        iterableLabel.text = "\(iterable.name!) = [\(iterableValue!.map{String($0)}.joined(separator: ", "))]"
+        updateLabels()
         
         // line 1 = for i in range:
         let line1 = NSMutableAttributedString(string: "for ", attributes: CodeColor.syntax)
@@ -111,9 +109,19 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
         iterator = steps[step].variables[0]
         iterable = steps[step].variables[1]
 
-        let iterableValue = iterable.value as? Array<Int>
-        iterableLabel.text = "\(iterable.name!) = [\(iterableValue!.map{String($0)}.joined(separator: ", "))]"
+        updateLabels()
+    }
+    
+    func updateLabels() {
         iteratorLabel.text = "\(iterator.name!) = \(iterator.value!)"
+        let iterableValue = iterable.value as! Array<Int>
+        
+        if iterableType == 0 {
+            iterableLabel.text = "\(iterable.name!) = [\(iterableValue.map{String($0)}.joined(separator: ", "))]"
+        } else {
+            let step = iterableValue.count > 1 ? iterableValue[1] - iterableValue[0] : 1
+            iterableLabel.text = "\(iterable.name!) = range(\(iterableValue.first!), \(iterableValue.last! + 1), \(step))"
+        }
         console.text = steps[step].log!
     }
     
