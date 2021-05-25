@@ -11,6 +11,7 @@ class ExamResult: NSObject, Codable {
     var questions: Double!
     var correctAnswers: Double!
     var grade: Double! { (correctAnswers / questions) * 100 }
+    var date: Date!
 
     init(questions: Double!) {
         self.questions = questions

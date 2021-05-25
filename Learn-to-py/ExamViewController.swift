@@ -45,8 +45,14 @@ class ExamViewController: UIViewController {
             
             question += 1
             if question == questions.count {
-                registerResults()
-                exit(sender)
+                result.date = Date()
+                let alerta = UIAlertController(title: "Resultados", message: "Su calificación en este examen es de \(result.grade!)", preferredStyle: .alert)
+                let accion = UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
+                    self.registerResults()
+                    self.exit(sender)
+                })
+                alerta.addAction(accion)
+                present(alerta, animated: true, completion: nil)
             } else {
                 questionLabel.text = questions[question].content
                 image.image = questions[question].image
