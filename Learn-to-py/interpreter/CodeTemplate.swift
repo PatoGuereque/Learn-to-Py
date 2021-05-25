@@ -26,4 +26,27 @@ class CodeTemplate {
         
         return steps
     }
+    
+    func forLoopSum(iterator: Variable, iterable: Variable, snippet: CodeSnippet) -> [Step] {
+        var steps: [Step] = []
+        
+        if let range = iterable.value as? Array<Int> {
+            var sum = 0
+            var iteratorCopy = iterator.copy()
+            
+            steps.append(Step(log: "", variables: [iteratorCopy, iterable], line: 0))
+            for i in range {
+                iteratorCopy = iterator.copy()
+                iteratorCopy.value = i
+                sum += i
+                snippet.doLogic(steps: &steps, variables: [iteratorCopy, iterable], number: sum)
+                steps.append(Step(log: steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 1))
+                steps.append(Step(log: steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 2))
+            }
+            
+            steps.append(Step(log: steps[steps.count - 1].log + "\(sum)\n", variables: [iteratorCopy, iterable], line: 3))
+        }
+        
+        return steps
+    }
 }

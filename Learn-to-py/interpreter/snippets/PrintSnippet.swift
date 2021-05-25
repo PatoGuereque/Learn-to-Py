@@ -15,10 +15,21 @@ class PrintSnippet: CodeSnippet {
     }
     
     func generateCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
-        let line = NSMutableAttributedString(string: "        print(f'{", attributes: CodeColor.syntax)
-        line.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
-        line.append(NSAttributedString(string: "}')", attributes: CodeColor.syntax))
-        return [line]
+        // line 1 = for i in range:
+        let line1 = NSMutableAttributedString(string: "for ", attributes: CodeColor.syntax)
+        line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
+        line1.append(NSAttributedString(string: " in ", attributes: CodeColor.syntax))
+        line1.append(NSAttributedString(string: "\(iterable.name!):", attributes: CodeColor.variable))
+        
+        // line 2 = print(f'{i}')
+        let line2 = NSMutableAttributedString(string: "    print(f'{", attributes: CodeColor.syntax)
+        line2.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
+        line2.append(NSAttributedString(string: "}')", attributes: CodeColor.syntax))
+        
+        return [
+            line1,
+            line2
+        ]
     }
     
     func getName() -> String {

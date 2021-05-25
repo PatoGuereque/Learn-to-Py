@@ -39,20 +39,19 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
         isPlaying = false
         playButton.setTitle("▶️", for: .normal)
         step = 0
-        steps = CodeTemplate.shared.forLoop(iterator: iterator, iterable: iterable, snippet: snippet)
+        
+        if snippet.getName() == "sumatoria" {
+            steps = CodeTemplate.shared.forLoopSum(iterator: iterator, iterable: iterable, snippet: snippet)
+        } else {
+            steps = CodeTemplate.shared.forLoop(iterator: iterator, iterable: iterable, snippet: snippet)
+        }
+        
         var start: [NSAttributedString] = []
         UIView.animate(withDuration: 0.3) {
             self.codeHighlight.frame.origin.y = CGFloat(7)
         }
         
         updateLabels()
-        
-        // line 1 = for i in range:
-        let line1 = NSMutableAttributedString(string: "for ", attributes: CodeColor.syntax)
-        line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
-        line1.append(NSAttributedString(string: " in ", attributes: CodeColor.syntax))
-        line1.append(NSAttributedString(string: "\(iterable.name!):", attributes: CodeColor.variable))
-        start.append(line1)
         
         start.append(contentsOf: snippet.generateCode(iterator: iterator, iterable: iterable))
         let lines: NSAttributedString = start.joined(with: "\n")
