@@ -207,10 +207,10 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sJd-mh-MPG">
-                                                <rect key="frame" x="7" y="7" width="29" height="18"/>
+                                                <rect key="frame" x="7" y="7" width="19.5" height="19"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-5y-kEV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="19.5" height="19"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="for">
                                                                 <attributes>
@@ -334,10 +334,10 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2mb-Nz-WIT">
-                                        <rect key="frame" x="13" y="18" width="77.5" height="20"/>
+                                        <rect key="frame" x="13" y="18" width="77" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Console..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-v3-9yg">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" name="PyBlue"/>
                                                 <nil key="highlightedColor"/>
