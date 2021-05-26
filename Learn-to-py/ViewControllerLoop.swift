@@ -47,7 +47,6 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         steps = codeTemplate!.generateSteps(variablesOriginal: &variables, snippet: snippet)
         
         var start: [NSAttributedString] = []
-        updateLabels()
 
         iteratorLabel.text = "\(iterator.name!) = \(iterator.value!)"
         let iterableValue = iterable.value as? Array<Int>
@@ -72,7 +71,8 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         linesOfCode = start.count
         let lines: NSAttributedString = start.joined(with: "\n")
         snippetText.attributedText = lines
-        self.snippetText.sizeToFit()
+        snippetText.sizeToFit()
+        updateLabels()
     }
     
     @IBAction func onControlClick(_ sender: UIButton) {
@@ -126,8 +126,8 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
             self.codeHighlight.frame.origin.y = CGFloat(7 + 18 * (line))
         }
 
-        iterator = steps[0].variables[0]
-        iterable = steps[0].variables[1]
+        iterator = steps[step].variables[0]
+        iterable = steps[step].variables[1]
 
         updateLabels()
     }
@@ -142,6 +142,7 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
             let step = iterableValue.count > 1 ? iterableValue[1] - iterableValue[0] : 1
             iterableLabel.text = "\(iterable.name!) = range(\(iterableValue.first!), \(iterableValue.last! + 1), \(step))"
         }
+        
         console.text = steps[step].log!
     }
     

@@ -48,8 +48,10 @@ class EditIterable: UIViewController, UITextFieldDelegate {
                 array = Array(stride(from: min, to: max, by: step))
             }
             
-            delegate.update(name: name, type: type.selectedSegmentIndex, content: array)
-            dismiss(animated: true, completion: nil)
+            if array.count > 0 {
+                delegate.update(name: name, type: type.selectedSegmentIndex, content: array)
+                dismiss(animated: true, completion: nil)
+            }
         }
     }
 }
