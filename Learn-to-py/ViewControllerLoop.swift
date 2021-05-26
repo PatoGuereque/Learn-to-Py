@@ -13,15 +13,17 @@ protocol AutoUpdate {
     func update(name: String, type: Int, content: Array<Int>) // Iterable update
 }
 
-class ViewControllerForLoop: UIViewController, AutoUpdate {
+class ViewControllerLoop: UIViewController, AutoUpdate {
     var steps: [Step] = []
     var step = 1
     var iterableType = 0 // 0: array, 1: range
     var lineOffset = 0
+    var linesOfCode = 0
     var snippet = codeSnippetsArr[0]
     var iterator = Variable(name: "i", value: "0", type: Int.self)
     var iterable = Variable(name: "iter", value: "1 2 3", type: Array<Int>.self)
     var isPlaying = false
+    var codeTemplate: CodeTemplate!
     @IBOutlet weak var snippetText: UILabel!
     @IBOutlet weak var codeHighlight: UIView!
     @IBOutlet weak var console: UILabel!
@@ -40,28 +42,34 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
         isPlaying = false
         playButton.setTitle("▶️", for: .normal)
         step = 1
-        steps = CodeTemplate.shared.forLoop(iterator: iterator, iterable: iterable, snippet: snippet)
+        lineOffset = 0
+        var variables = [iterator, iterable]
+        steps = codeTemplate!.generateSteps(variablesOriginal: &variables, snippet: snippet)
         
         var start: [NSAttributedString] = []
-        UIView.animate(withDuration: 0.3) {
-            self.codeHighlight.frame.origin.y = CGFloat(7)
-        }
-        
         updateLabels()
+
+        iteratorLabel.text = "\(iterator.name!) = \(iterator.value!)"
+        let iterableValue = iterable.value as? Array<Int>
+        iterableLabel.text = "\(iterable.name!) = [\(iterableValue!.map{String($0)}.joined(separator: ", "))]"
         
         let preLoopCode = snippet.preLoopCode(iterator: iterator, iterable: iterable)
         start.append(contentsOf: preLoopCode)
         lineOffset += preLoopCode.count
         
         // line 1 = for i in range:
-        let line1 = NSMutableAttributedString(string: "for ", attributes: CodeColor.syntax)
-        line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
-        line1.append(NSAttributedString(string: " in ", attributes: CodeColor.syntax))
-        line1.append(NSAttributedString(string: "\(iterable.name!):", attributes: CodeColor.variable))
-        start.append(line1)
+        let codeTemplateLines = codeTemplate!.loopCode(variables: variables)
+        start.append(contentsOf: codeTemplateLines)
+        lineOffset += codeTemplateLines.count - 1
+        
+        UIView.animate(withDuration: 0.3) {
+            self.codeHighlight.frame.origin.y = CGFloat(7 + 18 * (self.steps[self.step].line + self.lineOffset))
+        }
         
         start.append(contentsOf: snippet.loopCode(iterator: iterator, iterable: iterable))
+        start.append(contentsOf: codeTemplate.endLoopCode())
         start.append(contentsOf: snippet.postLoopCode(iterator: iterator, iterable: iterable))
+        linesOfCode = start.count
         let lines: NSAttributedString = start.joined(with: "\n")
         snippetText.attributedText = lines
         self.snippetText.sizeToFit()
@@ -109,8 +117,13 @@ class ViewControllerForLoop: UIViewController, AutoUpdate {
     }
     
     func moveStep() {
+        var line = self.steps[self.step].line + self.lineOffset
+        if self.steps[self.step].line < -5 {
+            line = linesOfCode - (self.steps[self.step].line + 11)
+        }
+        
         UIView.animate(withDuration: 0.3) {
-            self.codeHighlight.frame.origin.y = CGFloat(7 + 18 * (self.steps[self.step].line + self.lineOffset))
+            self.codeHighlight.frame.origin.y = CGFloat(7 + 18 * (line))
         }
 
         iterator = steps[0].variables[0]

@@ -23,7 +23,7 @@ class SumSnippet: CodeSnippet {
     func postLoopLogic(steps: inout [Step], variables: [Variable]) {
         let last = steps[steps.count - 1]
         let lastSum = variables[2].value!
-        steps.append(Step(log: last.log + "\(lastSum)", variables: variables, line: 2))
+        steps.append(Step(log: last.log + "\(lastSum)", variables: variables, line: -10)) // -10 = last line
     }
     
     func preLoopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {

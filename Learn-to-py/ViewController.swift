@@ -26,5 +26,15 @@ class ViewController: UIViewController {
     override var shouldAutorotate: Bool {
         return true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "for" {
+            let controller = segue.destination as! ViewControllerLoop
+            controller.codeTemplate = ForLoopTemplate()
+        } else if segue.identifier == "while" {
+            let controller = segue.destination as! ViewControllerLoop
+            controller.codeTemplate = WhileLoopTemplate()
+        }
+    }
 }
 
