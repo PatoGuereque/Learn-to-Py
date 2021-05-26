@@ -7,6 +7,6 @@
 
 import Foundation
 
-let codeSnippetsArr: [CodeSnippet] = [IfElseSnippet(), PrintSnippet(), SumSnippet()]
+let codeSnippetsArr: [CodeSnippet] = [IfElseSnippet(), PrintSnippet(), SumSnippet(), AboveTenCounterSnippet(), SumBelowTenSnippet(), EvenOddSumSnippet()]
 
 let variableNameMaxLength = 4

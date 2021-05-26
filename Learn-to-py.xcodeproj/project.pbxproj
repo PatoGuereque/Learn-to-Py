@@ -48,6 +48,9 @@
 		9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF3262D26AE0051D9E4 /* Variable.swift */; };
 		9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF6262D3CD10051D9E4 /* Step.swift */; };
 		9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AFC262DCD490051D9E4 /* Enums.swift */; };
+		9CA3CC1F265E14D700ED6E76 /* AboveTenCounterSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3CC1E265E14D700ED6E76 /* AboveTenCounterSnippet.swift */; };
+		9CA3CC21265E1AA900ED6E76 /* SumBelowTenSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3CC20265E1AA900ED6E76 /* SumBelowTenSnippet.swift */; };
+		9CA3CC23265E1E4C00ED6E76 /* EvenOddSumSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3CC22265E1E4C00ED6E76 /* EvenOddSumSnippet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,9 @@
 		9C925AF3262D26AE0051D9E4 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		9C925AF6262D3CD10051D9E4 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		9C925AFC262DCD490051D9E4 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		9CA3CC1E265E14D700ED6E76 /* AboveTenCounterSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboveTenCounterSnippet.swift; sourceTree = "<group>"; };
+		9CA3CC20265E1AA900ED6E76 /* SumBelowTenSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumBelowTenSnippet.swift; sourceTree = "<group>"; };
+		9CA3CC22265E1E4C00ED6E76 /* EvenOddSumSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenOddSumSnippet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,9 @@
 				44491D792641279B001CC861 /* IfElseSnippet.swift */,
 				44491D7C264128ED001CC861 /* PrintSnippet.swift */,
 				9C188A8C265D963400B1BF26 /* SumSnippet.swift */,
+				9CA3CC1E265E14D700ED6E76 /* AboveTenCounterSnippet.swift */,
+				9CA3CC20265E1AA900ED6E76 /* SumBelowTenSnippet.swift */,
+				9CA3CC22265E1E4C00ED6E76 /* EvenOddSumSnippet.swift */,
 			);
 			path = snippets;
 			sourceTree = "<group>";
@@ -309,8 +318,11 @@
 				9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */,
 				44491D77264126FE001CC861 /* CodeSnippet.swift in Sources */,
 				44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */,
+				9CA3CC21265E1AA900ED6E76 /* SumBelowTenSnippet.swift in Sources */,
+				9CA3CC23265E1E4C00ED6E76 /* EvenOddSumSnippet.swift in Sources */,
 				4418940B265DDA7A0069B133 /* WhileLoopTemplate.swift in Sources */,
 				44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */,
+				9CA3CC1F265E14D700ED6E76 /* AboveTenCounterSnippet.swift in Sources */,
 				4563DB68264DBF8800AFB4F8 /* ExamViewController.swift in Sources */,
 				73213787262F628E0092EA5A /* EditIterable.swift in Sources */,
 				44491D8126412DF5001CC861 /* Utils.swift in Sources */,

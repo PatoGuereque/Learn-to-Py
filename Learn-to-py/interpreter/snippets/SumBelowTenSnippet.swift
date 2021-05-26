@@ -1,13 +1,13 @@
 //
-//  SummatorySnippet.swift
+//  SumBelowTenSnippet.swift
 //  Learn-to-py
 //
-//  Created by Oscar Rodriguez on 25/05/21.
+//  Created by Oscar Rodriguez on 26/05/21.
 //
 
 import UIKit
 
-class SumSnippet: CodeSnippet {
+class SumBelowTenSnippet: CodeSnippet {
 
     func preLoopInit(variables: inout [Variable]) {
         variables.append(Variable(name: "suma", value: "0", type: Int.self))
@@ -15,8 +15,13 @@ class SumSnippet: CodeSnippet {
     
     func loopLogic(steps: inout [Step], variables: inout [Variable], number: Int) {
         let last = steps[steps.count - 1]
-        variables[2].value = variables[2].value! as! Int + number
+        
         steps.append(Step(log: last.log, variables: variables, line: 1))
+        
+        if number < 10 {
+            variables[2].value = variables[2].value! as! Int + number
+            steps.append(Step(log: last.log, variables: variables, line: 2))
+        }
     }
     
     func postLoopLogic(steps: inout [Step], variables: [Variable]) {
@@ -30,10 +35,16 @@ class SumSnippet: CodeSnippet {
     }
     
     func loopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
+        // line -> if i < 10:
+        let line1 = NSMutableAttributedString(string: "    if ", attributes: CodeColor.syntax)
+        line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
+        line1.append(NSAttributedString(string: " < 10:", attributes: CodeColor.syntax))
+        
         // line -> suma += i
-        let line = NSMutableAttributedString(string: "    suma += ", attributes: CodeColor.syntax)
-        line.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
-        return [line]
+        let line2 = NSMutableAttributedString(string: "        suma += ", attributes: CodeColor.syntax)
+        line2.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
+        
+        return [line1, line2]
     }
     
     func postLoopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
@@ -41,7 +52,7 @@ class SumSnippet: CodeSnippet {
     }
     
     func getName() -> String {
-        return "sumatoria"
+        return "suma menores a 10"
     }
     
 }

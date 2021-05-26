@@ -16,9 +16,9 @@ class PrintSnippet: CodeSnippet {
     
     func loopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
         // line 1 = print(f'{i}')
-        let line1 = NSMutableAttributedString(string: "    print(f'{", attributes: CodeColor.syntax)
+        let line1 = NSMutableAttributedString(string: "    print(", attributes: CodeColor.syntax)
         line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
-        line1.append(NSAttributedString(string: "}')", attributes: CodeColor.syntax))
+        line1.append(NSAttributedString(string: ")", attributes: CodeColor.syntax))
         
         return [line1]
     }
