@@ -14,39 +14,31 @@ class CodeTemplate {
     
     func forLoop(iterator: Variable, iterable: Variable, snippet: CodeSnippet) -> [Step] {
         var steps: [Step] = []
-        
+        var variables: [Variable] = [iterator, iterable]
+        snippet.preLoopInit(variables: &variables)
+        steps.append(Step(log: "", variables: variables, line: 0))
+                
         if let range = iterable.value as? Array<Int> {
             for i in range {
-                let iteratorCopy = iterator.copy()
-                iteratorCopy.value = i
-                steps.append(Step(log: steps.count == 0 ? "" : steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 0))
-                snippet.doLogic(steps: &steps, variables: [iteratorCopy, iterable], number: i)
+                variables = copyVariables(variables: variables)
+                variables[0].value = i // set i (out iterator) to current index
+                
+                steps.append(Step(log: steps[steps.count - 1].log, variables: variables, line: 0))
+                variables = copyVariables(variables: variables)
+                snippet.loopLogic(steps: &steps, variables: &variables, number: i)
             }
+            
+            snippet.postLoopLogic(steps: &steps, variables: variables)
         }
         
         return steps
     }
     
-    func forLoopSum(iterator: Variable, iterable: Variable, snippet: CodeSnippet) -> [Step] {
-        var steps: [Step] = []
-        
-        if let range = iterable.value as? Array<Int> {
-            var sum = 0
-            var iteratorCopy = iterator.copy()
-            
-            steps.append(Step(log: "", variables: [iteratorCopy, iterable], line: 0))
-            for i in range {
-                iteratorCopy = iterator.copy()
-                iteratorCopy.value = i
-                sum += i
-                snippet.doLogic(steps: &steps, variables: [iteratorCopy, iterable], number: sum)
-                steps.append(Step(log: steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 1))
-                steps.append(Step(log: steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 2))
-            }
-            
-            steps.append(Step(log: steps[steps.count - 1].log + "\(sum)\n", variables: [iteratorCopy, iterable], line: 3))
+    func copyVariables(variables: [Variable]) -> [Variable] {
+        var copy: [Variable] = []
+        for variable in variables {
+            copy.append(variable.copy())
         }
-        
-        return steps
+        return copy
     }
 }
