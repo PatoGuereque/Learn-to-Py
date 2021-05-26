@@ -71,7 +71,6 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         linesOfCode = start.count
         let lines: NSAttributedString = start.joined(with: "\n")
         snippetText.attributedText = lines
-        snippetText.sizeToFit()
         updateLabels()
     }
     
