@@ -9,10 +9,34 @@ import UIKit
 
 protocol CodeSnippet {
     
-    func doLogic(steps: inout [Step], variables: [Variable], number: Int)
+    func preLoopInit(variables: inout [Variable])
+    func loopLogic(steps: inout [Step], variables: inout [Variable], number: Int)
+    func postLoopLogic(steps: inout [Step], variables: [Variable])
     
-    func generateCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] 
+    func preLoopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString]
+    func loopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString]
+    func postLoopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString]
     
     func getName() -> String
+    
+}
+
+extension CodeSnippet {
+    
+    func preLoopInit(variables: inout [Variable]) {
+        // nothing
+    }
+    
+    func postLoopLogic(steps: inout [Step], variables: [Variable]) {
+        // nothing
+    }
+    
+    func preLoopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
+        return []
+    }
+    
+    func postLoopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
+        return []
+    }
     
 }

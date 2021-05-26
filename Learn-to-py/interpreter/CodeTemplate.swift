@@ -7,23 +7,26 @@
 
 import Foundation
 
-class CodeTemplate {
-    static let shared = CodeTemplate()
+protocol CodeTemplate {
     
-    private init() {}
+    func generateSteps(variablesOriginal: inout [Variable], snippet: CodeSnippet) -> [Step]
     
-    func forLoop(iterator: Variable, iterable: Variable, snippet: CodeSnippet) -> [Step] {
-        var steps: [Step] = []
-        
-        if let range = iterable.value as? Array<Int> {
-            for i in range {
-                let iteratorCopy = iterator.copy()
-                iteratorCopy.value = i
-                steps.append(Step(log: steps.count == 0 ? "" : steps[steps.count - 1].log, variables: [iteratorCopy, iterable], line: 0))
-                snippet.doLogic(steps: &steps, variables: [iteratorCopy, iterable], number: i)
-            }
+    func loopCode(variables: [Variable]) -> [NSAttributedString]
+    
+    func endLoopCode() -> [NSAttributedString]
+    
+}
+
+extension CodeTemplate {
+    func copyVariables(variables: [Variable]) -> [Variable] {
+        var copy: [Variable] = []
+        for variable in variables {
+            copy.append(variable.copy())
         }
-        
-        return steps
+        return copy
+    }
+    
+    func endLoopCode() -> [NSAttributedString] {
+        return []
     }
 }

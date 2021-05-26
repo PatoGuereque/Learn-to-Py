@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -40,7 +40,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gae-cn-Baq" kind="show" id="U02-2h-tSI"/>
+                                    <segue destination="gae-cn-Baq" kind="show" identifier="for" id="U02-2h-tSI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyb-eV-cKX">
@@ -50,7 +50,7 @@
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <state key="normal" title="Bucles While"/>
                                 <connections>
-                                    <segue destination="G3z-sA-mSX" kind="show" id="W5j-FY-uS1"/>
+                                    <segue destination="gae-cn-Baq" kind="show" identifier="while" id="Y5A-k7-rKb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbI-Bi-ZeE">
@@ -151,45 +151,10 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
             </objects>
             <point key="canvasLocation" x="486" y="897"/>
         </scene>
-        <!--While-->
-        <scene sceneID="276-pr-9ut">
-            <objects>
-                <viewController title="While" id="G3z-sA-mSX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8zK-CF-RE6">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyQ-bM-lXf">
-                                <rect key="frame" x="-5" y="12" width="30" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="PyYellow"/>
-                                <state key="normal" title="←">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="SQP-ZH-Qyw" kind="unwind" unwindAction="unwind:" id="1Xm-s8-Ozt"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="c7T-QI-Ny6"/>
-                        <color key="backgroundColor" name="Background"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pW6-Mn-8iM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XHs-2a-eBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="SQP-ZH-Qyw" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1077" y="-558"/>
-        </scene>
         <!--For-->
         <scene sceneID="Xpz-gX-Wtu">
             <objects>
-                <viewController title="For" id="gae-cn-Baq" customClass="ViewControllerForLoop" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="For" id="gae-cn-Baq" customClass="ViewControllerLoop" customModule="Learn_to_py" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mbg-ev-hL7">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,8 +296,8 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Console..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-v3-9yg">
                                                 <rect key="frame" x="0.0" y="0.0" width="77" height="20"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <color key="textColor" red="0.82745098039215681" green="0.72549019607843135" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                                <color key="textColor" name="PyBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -380,7 +345,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="T3H-co-I1S">
-                                        <rect key="frame" x="0.0" y="24.5" width="468" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="468" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T3H-co-I1S" id="7uK-n1-MKr">
                                             <rect key="frame" x="0.0" y="0.0" width="468" height="43.5"/>
@@ -771,6 +736,9 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
             <point key="canvasLocation" x="133" y="-1538"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y5A-k7-rKb"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Lapiz" width="83" height="83"/>
         <image name="LogoPython" width="768" height="768"/>

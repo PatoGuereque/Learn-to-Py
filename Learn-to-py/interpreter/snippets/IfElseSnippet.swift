@@ -9,7 +9,7 @@ import UIKit
 
 class IfElseSnippet: CodeSnippet {
     
-    func doLogic(steps: inout [Step], variables: [Variable], number: Int) {
+    func loopLogic(steps: inout [Step], variables: inout [Variable], number: Int) {
         let last = steps[steps.count - 1]
         steps.append(Step(log: last.log, variables: variables, line: 1))
         if number % 2 == 0 {
@@ -20,7 +20,7 @@ class IfElseSnippet: CodeSnippet {
         }
     }
     
-    func generateCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
+    func loopCode(iterator: Variable, iterable: Variable) -> [NSAttributedString] {
         // line 1 = if i % 2 == 0:
         let line1 = NSMutableAttributedString(string: "    if ", attributes: CodeColor.syntax)
         line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
@@ -34,7 +34,7 @@ class IfElseSnippet: CodeSnippet {
         // line 3 = else:
         let line3 = NSMutableAttributedString(string: "    else:", attributes: CodeColor.syntax)
         
-        // line 4 = print(f' {i} es par')
+        // line 4 = print(f' {i} es impar')
         let line4 = NSMutableAttributedString(string: "        print(f'{", attributes: CodeColor.syntax)
         line4.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
         line4.append(NSAttributedString(string: "} es impar')", attributes: CodeColor.syntax))

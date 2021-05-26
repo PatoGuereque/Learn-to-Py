@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44189408265DDA3D0069B133 /* ForLoopTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189407265DDA3D0069B133 /* ForLoopTemplate.swift */; };
+		4418940B265DDA7A0069B133 /* WhileLoopTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418940A265DDA7A0069B133 /* WhileLoopTemplate.swift */; };
 		44491D77264126FE001CC861 /* CodeSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D76264126FE001CC861 /* CodeSnippet.swift */; };
 		44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D792641279B001CC861 /* IfElseSnippet.swift */; };
 		44491D7D264128ED001CC861 /* PrintSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D7C264128ED001CC861 /* PrintSnippet.swift */; };
@@ -32,7 +34,7 @@
 		44C37AE2262D0CE100E7BD0C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD3262D0CE100E7BD0C /* Roboto-Bold.ttf */; };
 		44C37AE3262D0CE100E7BD0C /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD4262D0CE100E7BD0C /* Roboto-Thin.ttf */; };
 		44C37AE4262D0CE100E7BD0C /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44C37AD5262D0CE100E7BD0C /* Roboto-Black.ttf */; };
-		4544BAEB262FD05800CF3ACF /* ViewControllerForLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544BAEA262FD05800CF3ACF /* ViewControllerForLoop.swift */; };
+		4544BAEB262FD05800CF3ACF /* ViewControllerLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544BAEA262FD05800CF3ACF /* ViewControllerLoop.swift */; };
 		4563DB68264DBF8800AFB4F8 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563DB67264DBF8800AFB4F8 /* ExamViewController.swift */; };
 		4563DB6B264DC49D00AFB4F8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4563DB6A264DC49D00AFB4F8 /* Question.swift */; };
 		45EC4A332649E6CE00DB1D31 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */; };
@@ -41,6 +43,7 @@
 		7321377D262F58060092EA5A /* EditVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7321377C262F58060092EA5A /* EditVariable.swift */; };
 		73213783262F5E7F0092EA5A /* EditSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213782262F5E7F0092EA5A /* EditSnippet.swift */; };
 		73213787262F628E0092EA5A /* EditIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73213786262F628E0092EA5A /* EditIterable.swift */; };
+		9C188A8D265D963400B1BF26 /* SumSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C188A8C265D963400B1BF26 /* SumSnippet.swift */; };
 		9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF0262D24750051D9E4 /* CodeTemplate.swift */; };
 		9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF3262D26AE0051D9E4 /* Variable.swift */; };
 		9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C925AF6262D3CD10051D9E4 /* Step.swift */; };
@@ -48,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44189407265DDA3D0069B133 /* ForLoopTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForLoopTemplate.swift; sourceTree = "<group>"; };
+		4418940A265DDA7A0069B133 /* WhileLoopTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhileLoopTemplate.swift; sourceTree = "<group>"; };
 		44491D76264126FE001CC861 /* CodeSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnippet.swift; sourceTree = "<group>"; };
 		44491D792641279B001CC861 /* IfElseSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfElseSnippet.swift; sourceTree = "<group>"; };
 		44491D7C264128ED001CC861 /* PrintSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSnippet.swift; sourceTree = "<group>"; };
@@ -76,7 +81,7 @@
 		44C37AD3262D0CE100E7BD0C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		44C37AD4262D0CE100E7BD0C /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		44C37AD5262D0CE100E7BD0C /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		4544BAEA262FD05800CF3ACF /* ViewControllerForLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForLoop.swift; sourceTree = "<group>"; };
+		4544BAEA262FD05800CF3ACF /* ViewControllerLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLoop.swift; sourceTree = "<group>"; };
 		4563DB67264DBF8800AFB4F8 /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
 		4563DB6A264DC49D00AFB4F8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 		7321377C262F58060092EA5A /* EditVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVariable.swift; sourceTree = "<group>"; };
 		73213782262F5E7F0092EA5A /* EditSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSnippet.swift; sourceTree = "<group>"; };
 		73213786262F628E0092EA5A /* EditIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIterable.swift; sourceTree = "<group>"; };
+		9C188A8C265D963400B1BF26 /* SumSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumSnippet.swift; sourceTree = "<group>"; };
 		9C925AF0262D24750051D9E4 /* CodeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTemplate.swift; sourceTree = "<group>"; };
 		9C925AF3262D26AE0051D9E4 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		9C925AF6262D3CD10051D9E4 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -101,9 +107,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44189406265DDA2C0069B133 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				44189407265DDA3D0069B133 /* ForLoopTemplate.swift */,
+				4418940A265DDA7A0069B133 /* WhileLoopTemplate.swift */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
 		44491D732641263B001CC861 /* interpreter */ = {
 			isa = PBXGroup;
 			children = (
+				44189406265DDA2C0069B133 /* templates */,
 				44491D75264126A2001CC861 /* snippets */,
 				9C925AF0262D24750051D9E4 /* CodeTemplate.swift */,
 				44491D76264126FE001CC861 /* CodeSnippet.swift */,
@@ -120,6 +136,7 @@
 			children = (
 				44491D792641279B001CC861 /* IfElseSnippet.swift */,
 				44491D7C264128ED001CC861 /* PrintSnippet.swift */,
+				9C188A8C265D963400B1BF26 /* SumSnippet.swift */,
 			);
 			path = snippets;
 			sourceTree = "<group>";
@@ -160,7 +177,7 @@
 				73213782262F5E7F0092EA5A /* EditSnippet.swift */,
 				73213786262F628E0092EA5A /* EditIterable.swift */,
 				44C37AA7262CFC7F00E7BD0C /* ViewController.swift */,
-				4544BAEA262FD05800CF3ACF /* ViewControllerForLoop.swift */,
+				4544BAEA262FD05800CF3ACF /* ViewControllerLoop.swift */,
 			);
 			path = "Learn-to-py";
 			sourceTree = "<group>";
@@ -292,6 +309,7 @@
 				9C925AF1262D24750051D9E4 /* CodeTemplate.swift in Sources */,
 				44491D77264126FE001CC861 /* CodeSnippet.swift in Sources */,
 				44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */,
+				4418940B265DDA7A0069B133 /* WhileLoopTemplate.swift in Sources */,
 				44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */,
 				4563DB68264DBF8800AFB4F8 /* ExamViewController.swift in Sources */,
 				73213787262F628E0092EA5A /* EditIterable.swift in Sources */,
@@ -302,12 +320,14 @@
 				9C925AF4262D26AE0051D9E4 /* Variable.swift in Sources */,
 				44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */,
 				73213783262F5E7F0092EA5A /* EditSnippet.swift in Sources */,
+				9C188A8D265D963400B1BF26 /* SumSnippet.swift in Sources */,
 				7312D4BE265239630041A38D /* ExamResult.swift in Sources */,
 				45FC96A6265221F70058AF59 /* CodeColor.swift in Sources */,
 				9C925AFD262DCD490051D9E4 /* Enums.swift in Sources */,
 				45EC4A332649E6CE00DB1D31 /* ResultsViewController.swift in Sources */,
+				44189408265DDA3D0069B133 /* ForLoopTemplate.swift in Sources */,
 				9C925AF7262D3CD10051D9E4 /* Step.swift in Sources */,
-				4544BAEB262FD05800CF3ACF /* ViewControllerForLoop.swift in Sources */,
+				4544BAEB262FD05800CF3ACF /* ViewControllerLoop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
