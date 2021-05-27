@@ -46,11 +46,7 @@ class ExamViewController: UIViewController {
             
             question += 1
             if question == questions.count {
-                let formatter = DateFormatter()
-                formatter.dateFormat = "MMM d, h:mm a"
                 result.date = Date()
-                let dateString = formatter.string(from:result.date)
-                NSLog("%@", dateString)
                 let alerta = UIAlertController(title: "Resultados", message: "Su calificación en este examen es de \(result.grade!)", preferredStyle: .alert)
                 let accion = UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
                     self.registerResults()
@@ -72,12 +68,17 @@ class ExamViewController: UIViewController {
     func registerResults() {
         var history: [ExamResult] = []
         
+        // attempt to load history if it's not corrupt
         do {
             if FileManager.default.fileExists(atPath: url.path) {
                 let contents = try Data.init(contentsOf: url)
                 history = try PropertyListDecoder().decode([ExamResult].self, from: contents)
             }
-            history.insert(result!, at: 0)
+        } catch { }
+        
+        // insert and save data
+        history.insert(result!, at: 0)
+        do {
             let data = try PropertyListEncoder().encode(history)
             try data.write(to: url)
         } catch {

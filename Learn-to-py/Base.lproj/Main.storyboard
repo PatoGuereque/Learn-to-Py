@@ -265,10 +265,10 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sJd-mh-MPG">
-                                                <rect key="frame" x="7" y="7" width="29" height="18"/>
+                                                <rect key="frame" x="7" y="7" width="19.5" height="19"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-5y-kEV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="19.5" height="19"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="for">
                                                                 <attributes>
@@ -392,10 +392,10 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2mb-Nz-WIT">
-                                        <rect key="frame" x="13" y="18" width="77.5" height="20"/>
+                                        <rect key="frame" x="13" y="18" width="77" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Console..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-v3-9yg">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" name="PyBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -639,7 +639,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSz-Gv-eqM">
-                                <rect key="frame" x="446" y="208.5" width="173" height="28.5"/>
+                                <rect key="frame" x="446" y="208.5" width="173" height="29"/>
                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -647,7 +647,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                 <rect key="frame" x="38" y="46" width="352" height="314"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owv-Rp-BWN">
-                                <rect key="frame" x="446" y="284" width="173" height="34"/>
+                                <rect key="frame" x="446" y="284.5" width="173" height="34"/>
                                 <color key="backgroundColor" name="CodeBlue"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="tintColor" name="PyYellow"/>
@@ -667,7 +667,7 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-RX-ob5">
-                                <rect key="frame" x="417" y="322" width="240" height="33"/>
+                                <rect key="frame" x="417" y="322.5" width="240" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="6hy-Mr-Wwe"/>
                                 </constraints>
