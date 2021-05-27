@@ -13,10 +13,12 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var table: UITableView!
     var results: [ExamResult] = []
     let url = pathURL(name: "Rank", format: "plist")
+    let formatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadHistory()
+        formatter.dateFormat = "MMM d, h:mm a"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,8 +28,13 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         let result = results[indexPath.row]
+        var dateString = ""
         
-        cell.textLabel?.text = "\(result.correctAnswers!) de \(result.questions!) correctas: \(result.grade!). Fecha de presentación: \(result.date!)"
+        if let date = result.date {
+            dateString = formatter.string(from: date)
+        }
+        
+        cell.textLabel?.text = "\(result.correctAnswers!) de \(result.questions!) correctas: \(result.grade!). \(dateString)"
         
         return cell
     }
