@@ -33,7 +33,17 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var iterador = ""
+        let randomInt = Int.random(in: 3..<5)
+        for n in 0...randomInt-1 {
+            let randomInt1 = Int.random(in: 0..<9)
+            if n == 0 {
+                iterador = "\(randomInt1)"
+            } else {
+                iterador = iterador + " \(randomInt1)"
+            }
+        }
+        iterable = Variable(name: "iter", value: iterador, type: Array<Int>.self)
         refresh()
     }
     

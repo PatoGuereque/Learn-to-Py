@@ -160,14 +160,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-AL-FkR" userLabel="Label">
-                                <rect key="frame" x="137" y="53.5" width="393" height="268"/>
+                                <rect key="frame" x="58.5" y="53.5" width="550" height="268"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="268" id="6J7-jo-leH"/>
-                                    <constraint firstAttribute="width" constant="393" id="thK-RZ-ssU"/>
+                                    <constraint firstAttribute="width" constant="550" id="thK-RZ-ssU"/>
                                 </constraints>
-                                <string key="text">Aplicación desarrollada por José Patricio Güereque, Oscar Rodriguez, Gabriel Gomez y Javier Sanchez
+                                <string key="text">Learn to Py fue desarrollado como proyecto final de la materia Proyecto desarrollo para dispositivos moviles en el semestre FabreroJunio 2021
 
-Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Móviles con la maestra Yolanda Martinez de la Universidad de Estudios Superiores (Tec de Monterrey)</string>
+Desarrolladores:
+Óscar David Rodriguez Moscosa - A01229551
+José Patricio Güereque de la Garza - A00826147
+Gabriel David Gómez Novau - A01720009
+Javier Sánchez Vázquez de Mercado - A00517066</string>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
