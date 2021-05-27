@@ -61,10 +61,6 @@ class ExamViewController: UIViewController {
         }
     }
     
-    @IBAction func exit(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     func registerResults() {
         var history: [ExamResult] = []
         
@@ -84,5 +80,15 @@ class ExamViewController: UIViewController {
         } catch {
             print(error)
         }
+    }
+    
+    // MARK: - Tap Gesture Recognizer
+    @IBAction func onViewTap(_ sender: UITapGestureRecognizer) {
+        hideKeyboard()
+    }
+    
+    // MARK: - Navigation
+    @IBAction func exit(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
