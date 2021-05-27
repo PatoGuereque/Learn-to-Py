@@ -13,6 +13,7 @@
 		44491D7A2641279B001CC861 /* IfElseSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D792641279B001CC861 /* IfElseSnippet.swift */; };
 		44491D7D264128ED001CC861 /* PrintSnippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D7C264128ED001CC861 /* PrintSnippet.swift */; };
 		44491D8126412DF5001CC861 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44491D8026412DF5001CC861 /* Utils.swift */; };
+		44A480272660585A00E2BFA9 /* KeyboardViewPushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A480262660585A00E2BFA9 /* KeyboardViewPushController.swift */; };
 		44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */; };
 		44C37AA6262CFC7F00E7BD0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */; };
 		44C37AA8262CFC7F00E7BD0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C37AA7262CFC7F00E7BD0C /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		44491D7C264128ED001CC861 /* PrintSnippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSnippet.swift; sourceTree = "<group>"; };
 		44491D8026412DF5001CC861 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4454716626518EAB00A7B3E8 /* CodeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeColor.swift; sourceTree = "<group>"; };
+		44A480262660585A00E2BFA9 /* KeyboardViewPushController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewPushController.swift; sourceTree = "<group>"; };
 		44C37AA0262CFC7F00E7BD0C /* Learn-to-py.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn-to-py.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C37AA3262CFC7F00E7BD0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44C37AA5262CFC7F00E7BD0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				4454716626518EAB00A7B3E8 /* CodeColor.swift */,
 				4563DB6A264DC49D00AFB4F8 /* Question.swift */,
 				4563DB67264DBF8800AFB4F8 /* ExamViewController.swift */,
+				44A480262660585A00E2BFA9 /* KeyboardViewPushController.swift */,
 				7312D4BD265239630041A38D /* ExamResult.swift */,
 				45EC4A322649E6CE00DB1D31 /* ResultsViewController.swift */,
 				44C37AAC262CFC8000E7BD0C /* Assets.xcassets */,
@@ -323,6 +326,7 @@
 				4418940B265DDA7A0069B133 /* WhileLoopTemplate.swift in Sources */,
 				44C37AA4262CFC7F00E7BD0C /* AppDelegate.swift in Sources */,
 				9CA3CC1F265E14D700ED6E76 /* AboveTenCounterSnippet.swift in Sources */,
+				44A480272660585A00E2BFA9 /* KeyboardViewPushController.swift in Sources */,
 				4563DB68264DBF8800AFB4F8 /* ExamViewController.swift in Sources */,
 				73213787262F628E0092EA5A /* EditIterable.swift in Sources */,
 				44491D8126412DF5001CC861 /* Utils.swift in Sources */,

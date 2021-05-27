@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditVariable: UIViewController, UITextFieldDelegate {
+class EditVariable: KeyboardViewPushController, UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var label: UILabel!
     var initialValue: String!
@@ -30,5 +30,15 @@ class EditVariable: UIViewController, UITextFieldDelegate {
             delegate.update(name: name)
             dismiss(animated: true, completion: nil)
         }
+    }
+    
+    override func getMoveAmount(keyboardSize: CGRect) -> CGFloat {
+        let maxY = self.view.superview!.frame.height - keyboardSize.height
+        let nameY = name.superview!.convert(name.frame.origin, to: nil).y + name.frame.height + 20
+        
+        if (nameY > maxY) {
+            return nameY - maxY
+        }
+        return 0
     }
 }
