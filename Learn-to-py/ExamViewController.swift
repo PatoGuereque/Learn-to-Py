@@ -17,9 +17,9 @@ class ExamViewController: UIViewController {
     var result: ExamResult!
     var question: Int!
     var questions = [
-        Question(content: "¿La variable i es par o impar en la tercera iteración? (Par/Impar)", answer: "Impar", image: UIImage(named: "Pregunta 1")),
-        Question(content: "¿La variable i es par o impar en la cuarta iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Pregunta 2")),
-        Question(content: "¿La variable i es par o impar en la primera iteración? (Par/Impar)", answer: "Par", image: UIImage(named: "Pregunta 3")),
+        Question(content: "¿La variable i es par o impar en la tercera iteración? (par/impar)", answer: "impar", image: UIImage(named: "Pregunta 1")),
+        Question(content: "¿La variable i es par o impar en la cuarta iteración? (par/impar)", answer: "par", image: UIImage(named: "Pregunta 2")),
+        Question(content: "¿La variable i es par o impar en la primera iteración? (par/impar)", answer: "par", image: UIImage(named: "Pregunta 3")),
         Question(content: "¿Qué valor tiene el paso de la variable iterable?", answer: "3", image: UIImage(named: "Pregunta 4")),
         Question(content: "¿Qué valor tiene el paso de la variable iterable?", answer: "4", image: UIImage(named: "Pregunta 5"))
     ]
@@ -35,7 +35,8 @@ class ExamViewController: UIViewController {
     }
     
     @IBAction func checkQuestion(_ sender: UIButton) {
-        if let guess = answer.text {
+        let textoIngresado = answer.text?.lowercased()
+        if let guess = textoIngresado {
             if questions[question].isCorrect(guess: guess) {
                 result.correctAnswers += 1
                 status.text = "Su respuesta es correcta"
@@ -45,7 +46,11 @@ class ExamViewController: UIViewController {
             
             question += 1
             if question == questions.count {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "MMM d, h:mm a"
                 result.date = Date()
+                let dateString = formatter.string(from:result.date)
+                NSLog("%@", dateString)
                 let alerta = UIAlertController(title: "Resultados", message: "Su calificación en este examen es de \(result.grade!)", preferredStyle: .alert)
                 let accion = UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
                     self.registerResults()
@@ -72,7 +77,6 @@ class ExamViewController: UIViewController {
                 let contents = try Data.init(contentsOf: url)
                 history = try PropertyListDecoder().decode([ExamResult].self, from: contents)
             }
-            
             history.insert(result!, at: 0)
             let data = try PropertyListEncoder().encode(history)
             try data.write(to: url)

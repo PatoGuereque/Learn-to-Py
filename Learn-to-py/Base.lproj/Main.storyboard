@@ -31,10 +31,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV2-yF-eJz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV2-yF-eJz">
                                 <rect key="frame" x="156" y="85" width="162" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PyYellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="hTm-ph-fPI"/>
+                                    <constraint firstAttribute="width" constant="162" id="zV9-a2-87P"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <state key="normal" title="Bucles For">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -43,30 +46,39 @@
                                     <segue destination="gae-cn-Baq" kind="show" identifier="for" id="U02-2h-tSI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyb-eV-cKX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyb-eV-cKX">
                                 <rect key="frame" x="348" y="84" width="162" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PyBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="kAZ-EW-kq0"/>
+                                    <constraint firstAttribute="width" constant="162" id="sdn-ib-2hq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <state key="normal" title="Bucles While"/>
                                 <connections>
                                     <segue destination="gae-cn-Baq" kind="show" identifier="while" id="Y5A-k7-rKb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbI-Bi-ZeE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbI-Bi-ZeE">
                                 <rect key="frame" x="156" y="203" width="162" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PyBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="5Ex-Ht-aRQ"/>
+                                    <constraint firstAttribute="height" constant="88" id="pql-9Z-1Qv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <state key="normal" title="Práctica"/>
                                 <connections>
                                     <segue destination="dFj-Zp-cp3" kind="show" id="hAZ-c6-4C6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65M-d2-xOR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65M-d2-xOR">
                                 <rect key="frame" x="348" y="202" width="162" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PyYellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="7U8-3z-FKR"/>
+                                    <constraint firstAttribute="width" constant="162" id="YzK-Hj-dKQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                 <state key="normal" title="Información">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -79,9 +91,8 @@
                                 <rect key="frame" x="10" y="11" width="51" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn to Py" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luA-EV-x86">
-                                <rect key="frame" x="271" y="20" width="122" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn to Py" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luA-EV-x86">
+                                <rect key="frame" x="272" y="21" width="123.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -89,6 +100,22 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="Fyb-eV-cKX" firstAttribute="top" secondItem="luA-EV-x86" secondAttribute="bottom" constant="35" id="E5r-YH-e0n"/>
+                            <constraint firstItem="65M-d2-xOR" firstAttribute="top" secondItem="Fyb-eV-cKX" secondAttribute="bottom" constant="30" id="H1j-Kc-spk"/>
+                            <constraint firstItem="65M-d2-xOR" firstAttribute="top" secondItem="Fyb-eV-cKX" secondAttribute="bottom" constant="30" id="HpG-fX-eiy"/>
+                            <constraint firstItem="Fyb-eV-cKX" firstAttribute="leading" secondItem="vV2-yF-eJz" secondAttribute="trailing" constant="30" id="Leh-at-G3N"/>
+                            <constraint firstItem="Fyb-eV-cKX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="84" id="M31-Lu-N6r"/>
+                            <constraint firstItem="luA-EV-x86" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sio-Cu-XBl"/>
+                            <constraint firstItem="65M-d2-xOR" firstAttribute="leading" secondItem="RbI-Bi-ZeE" secondAttribute="trailing" constant="30" id="UaZ-pi-PD7"/>
+                            <constraint firstItem="RbI-Bi-ZeE" firstAttribute="top" secondItem="vV2-yF-eJz" secondAttribute="bottom" constant="30" id="b1r-Zt-huf"/>
+                            <constraint firstItem="Fyb-eV-cKX" firstAttribute="leading" secondItem="vV2-yF-eJz" secondAttribute="trailing" constant="30" id="fWf-cp-U0d"/>
+                            <constraint firstItem="RbI-Bi-ZeE" firstAttribute="top" secondItem="vV2-yF-eJz" secondAttribute="bottom" constant="30" id="j04-Vb-Pkc"/>
+                            <constraint firstItem="vV2-yF-eJz" firstAttribute="leading" secondItem="RbI-Bi-ZeE" secondAttribute="leading" id="jU9-nC-8cP"/>
+                            <constraint firstItem="vV2-yF-eJz" firstAttribute="top" secondItem="luA-EV-x86" secondAttribute="bottom" constant="36" id="jtc-AC-77E"/>
+                            <constraint firstItem="vV2-yF-eJz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="oLd-lq-bfq"/>
+                            <constraint firstItem="65M-d2-xOR" firstAttribute="leading" secondItem="RbI-Bi-ZeE" secondAttribute="trailing" constant="30" id="tJF-V5-UEA"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,9 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAj-oV-zgU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAj-oV-zgU">
                                 <rect key="frame" x="-5" y="12" width="30" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PyYellow"/>
                                 <state key="normal" title="←">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -119,9 +145,12 @@
                                     <segue destination="ygB-95-Vd7" kind="unwind" unwindAction="unwind:" id="Lum-Dn-kDi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-AL-FkR">
-                                <rect key="frame" x="137" y="59" width="393" height="268"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4h-AL-FkR" userLabel="Label">
+                                <rect key="frame" x="137" y="53.5" width="393" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="6J7-jo-leH"/>
+                                    <constraint firstAttribute="width" constant="393" id="thK-RZ-ssU"/>
+                                </constraints>
                                 <string key="text">Aplicación desarrollada por José Patricio Güereque, Oscar Rodriguez, Gabriel Gomez y Javier Sanchez
 
 Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Móviles con la maestra Yolanda Martinez de la Universidad de Estudios Superiores (Tec de Monterrey)</string>
@@ -129,20 +158,33 @@ Desarrollada como proyecto final para la clase de Proyecto para Dispositivos Mó
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoPython" translatesAutoresizingMaskIntoConstraints="NO" id="MWC-Zw-ge6">
-                                <rect key="frame" x="188" y="4" width="51" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3G-tJ-0ul">
-                                <rect key="frame" x="268" y="15" width="131" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3G-tJ-0ul">
+                                <rect key="frame" x="270" y="14" width="127.5" height="30"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoPython" translatesAutoresizingMaskIntoConstraints="NO" id="MWC-Zw-ge6">
+                                <rect key="frame" x="190" y="4" width="51" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="5ig-rc-NNN"/>
+                                    <constraint firstAttribute="height" constant="50" id="ub4-zj-exz"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jAA-JE-BB9"/>
                         <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="a4h-AL-FkR" firstAttribute="top" secondItem="k3G-tJ-0ul" secondAttribute="bottom" constant="9.5" id="6sK-Pg-aK8"/>
+                            <constraint firstItem="jAA-JE-BB9" firstAttribute="bottom" secondItem="rAj-oV-zgU" secondAttribute="bottom" constant="329" id="C1Z-Zb-nh8"/>
+                            <constraint firstItem="k3G-tJ-0ul" firstAttribute="centerY" secondItem="MWC-Zw-ge6" secondAttribute="centerY" id="CEy-V0-FBz"/>
+                            <constraint firstItem="rAj-oV-zgU" firstAttribute="leading" secondItem="Glk-6O-Wpj" secondAttribute="leadingMargin" constant="-25" id="OyK-cC-Qa5"/>
+                            <constraint firstItem="k3G-tJ-0ul" firstAttribute="leading" secondItem="MWC-Zw-ge6" secondAttribute="trailing" constant="29" id="ZJE-Wl-lQo"/>
+                            <constraint firstItem="a4h-AL-FkR" firstAttribute="centerY" secondItem="Glk-6O-Wpj" secondAttribute="centerY" id="asB-B9-6jC"/>
+                            <constraint firstItem="k3G-tJ-0ul" firstAttribute="centerY" secondItem="rAj-oV-zgU" secondAttribute="centerY" id="dl9-cW-lB3"/>
+                            <constraint firstItem="a4h-AL-FkR" firstAttribute="centerX" secondItem="Glk-6O-Wpj" secondAttribute="centerX" id="uVF-9E-ViF"/>
+                            <constraint firstItem="k3G-tJ-0ul" firstAttribute="centerX" secondItem="a4h-AL-FkR" secondAttribute="centerX" id="zZc-Zl-ULw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5rC-eR-68b"/>
                 </viewController>
