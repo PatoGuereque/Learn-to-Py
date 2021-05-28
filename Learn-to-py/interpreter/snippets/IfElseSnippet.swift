@@ -27,17 +27,17 @@ class IfElseSnippet: CodeSnippet {
         line1.append(NSAttributedString(string: " % 2 == 0:", attributes: CodeColor.syntax))
         
         // line 2 = print(f' {i} es par')
-        let line2 = NSMutableAttributedString(string: "        print(f'{", attributes: CodeColor.syntax)
+        let line2 = NSMutableAttributedString(string: "        print(", attributes: CodeColor.syntax)
         line2.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
-        line2.append(NSAttributedString(string: "} es par')", attributes: CodeColor.syntax))
+        line2.append(NSAttributedString(string: ", 'es par')", attributes: CodeColor.syntax))
         
         // line 3 = else:
         let line3 = NSMutableAttributedString(string: "    else:", attributes: CodeColor.syntax)
         
         // line 4 = print(f' {i} es impar')
-        let line4 = NSMutableAttributedString(string: "        print(f'{", attributes: CodeColor.syntax)
+        let line4 = NSMutableAttributedString(string: "        print(", attributes: CodeColor.syntax)
         line4.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
-        line4.append(NSAttributedString(string: "} es impar')", attributes: CodeColor.syntax))
+        line4.append(NSAttributedString(string: ", 'es impar')", attributes: CodeColor.syntax))
                      
         return [
             line1,

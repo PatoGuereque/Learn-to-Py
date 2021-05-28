@@ -34,7 +34,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
             dateString = formatter.string(from: date)
         }
         
-        cell.textLabel?.text = "\(Int(result.correctAnswers!)) de \(Int(result.questions!)) correctas: \(result.grade!). \(dateString)"
+        cell.textLabel?.text = "\(Int(result.correctAnswers!)) de \(Int(result.questions!)) correctas: \(result.grade!)\t\t\(dateString)"
         
         return cell
     }

@@ -8,6 +8,7 @@
 import Foundation
 
 protocol CodeTemplate {
+    var name: String { get set }
     
     func generateSteps(variablesOriginal: inout [Variable], snippet: CodeSnippet) -> [Step]
     

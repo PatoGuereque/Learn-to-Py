@@ -10,7 +10,7 @@ import UIKit
 protocol AutoUpdate {
     func update(name: String) // Variable update
     func update(snippet: CodeSnippet) // Snippet update
-    func update(name: String, type: Int, content: Array<Int>) // Iterable update
+    func update(name: String, type: Int, displayFormat: String, content: Array<Int>) // Iterable update
 }
 
 class ViewControllerLoop: UIViewController, AutoUpdate {
@@ -23,6 +23,7 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
     var iterator = Variable(name: "i", value: "0", type: Int.self)
     var iterable = Variable(name: "iter", value: "1 2 3", type: Array<Int>.self)
     var isPlaying = false
+    var iterableDisplayFormat: String!
     var codeTemplate: CodeTemplate!
     @IBOutlet weak var snippetText: UILabel!
     @IBOutlet weak var codeHighlight: UIView!
@@ -33,17 +34,20 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var iterador = ""
-        let randomInt = Int.random(in: 3..<5)
-        for n in 0...randomInt-1 {
-            let randomInt1 = Int.random(in: 0..<9)
+        var iter = ""
+        let rand0 = Int.random(in: 3 ..< 5)
+        
+        for n in 0...rand0 - 1 {
+            let rand1 = Int.random(in: 0 ..< 9)
             if n == 0 {
-                iterador = "\(randomInt1)"
+                iter = "\(rand1)"
             } else {
-                iterador = iterador + " \(randomInt1)"
+                iter = iter + " \(rand1)"
             }
         }
-        iterable = Variable(name: "iter", value: iterador, type: Array<Int>.self)
+        
+        iterable = Variable(name: "iter", value: iter, type: Array<Int>.self)
+        iterableDisplayFormat = "[\((iterable.value as! Array<Int>).map{String($0)}.joined(separator: ", "))]"
         refresh()
     }
     
@@ -57,10 +61,6 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         steps = codeTemplate!.generateSteps(variablesOriginal: &variables, snippet: snippet)
         
         var start: [NSAttributedString] = []
-
-        iteratorLabel.text = "\(iterator.name!) = \(iterator.value!)"
-        let iterableValue = iterable.value as? Array<Int>
-        iterableLabel.text = "\(iterable.name!) = [\(iterableValue!.map{String($0)}.joined(separator: ", "))]"
         
         let preLoopCode = snippet.preLoopCode(iterator: iterator, iterable: iterable)
         start.append(contentsOf: preLoopCode)
@@ -81,6 +81,7 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         linesOfCode = start.count
         let lines: NSAttributedString = start.joined(with: "\n")
         snippetText.attributedText = lines
+        
         updateLabels()
     }
     
@@ -111,6 +112,7 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
                 self.step = self.step + 1
                 self.moveStep()
             }
+            
             return
         }
         
@@ -122,13 +124,20 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         if sender.restorationIdentifier! == "back" {
             step = max(step - 1, 1)
         }
+        
+        if sender.restorationIdentifier! == "reset" {
+            step = 1
+            isPlaying = false
+            playButton.setTitle("▶️", for: .normal)
+        }
+        
         moveStep()
     }
     
     func moveStep() {
-        var line = self.steps[self.step].line + self.lineOffset
-        if self.steps[self.step].line < -5 {
-            line = linesOfCode - (self.steps[self.step].line + 11)
+        var line = steps[step].line + lineOffset
+        if steps[step].line < -5 {
+            line = linesOfCode - (steps[step].line + 11)
         }
         
         UIView.animate(withDuration: 0.3) {
@@ -143,15 +152,7 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
     
     func updateLabels() {
         iteratorLabel.text = "\(iterator.name!) = \(iterator.value!)"
-        let iterableValue = iterable.value as! Array<Int>
-        
-        if iterableType == 0 {
-            iterableLabel.text = "\(iterable.name!) = [\(iterableValue.map{String($0)}.joined(separator: ", "))]"
-        } else {
-            let step = iterableValue.count > 1 ? iterableValue[1] - iterableValue[0] : 1
-            iterableLabel.text = "\(iterable.name!) = range(\(iterableValue.first!), \(iterableValue.last! + 1), \(step))"
-        }
-        
+        iterableLabel.text = "\(iterable.name!) = \(iterableDisplayFormat!)"
         console.text = steps[step].log!
     }
     
@@ -169,9 +170,10 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         refresh()
     }
     
-    func update(name: String, type: Int, content: Array<Int>) {
+    func update(name: String, type: Int, displayFormat: String, content: Array<Int>) {
         iterable.name = name
         iterable.value = content
+        iterableDisplayFormat = displayFormat
         iterableType = type
         
         refresh()
@@ -190,6 +192,12 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
                 let view = segue.destination as! EditIterable
                 view.delegate = self
                 view.initialValue = iterable.name
+                
+                if codeTemplate.name == "for" {
+                    view.segments = ["arreglo", "rango"]
+                } else {
+                    view.segments = ["arreglo"]
+                }
             }
             
             if button.restorationIdentifier == "snippet" {

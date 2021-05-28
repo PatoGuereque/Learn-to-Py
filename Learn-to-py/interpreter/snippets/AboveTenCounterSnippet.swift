@@ -42,9 +42,8 @@ class AboveTenCounterSnippet: CodeSnippet {
         line1.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
         line1.append(NSAttributedString(string: " > 10:", attributes: CodeColor.syntax))
         
-        // line -> cont += i
-        let line2 = NSMutableAttributedString(string: "        cont += ", attributes: CodeColor.syntax)
-        line2.append(NSAttributedString(string: iterator.name, attributes: CodeColor.iteratorVariable))
+        // line -> cont += 1
+        let line2 = NSMutableAttributedString(string: "        cont += 1", attributes: CodeColor.syntax)
         
         return [line1, line2]
     }

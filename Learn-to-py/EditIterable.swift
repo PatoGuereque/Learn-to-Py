@@ -13,6 +13,7 @@ class EditIterable: KeyboardViewPushController, UITextFieldDelegate {
     @IBOutlet weak var type: UISegmentedControl!
     @IBOutlet weak var content: UITextField!
     var initialValue: String!
+    var segments: [String] = []
     var delegate: AutoUpdate!
     
     override func viewDidLoad() {
@@ -20,6 +21,14 @@ class EditIterable: KeyboardViewPushController, UITextFieldDelegate {
         label.text = initialValue
         name.text = initialValue
         name.delegate = self
+        
+        type.removeAllSegments()
+        
+        for segment in segments {
+            type.insertSegment(withTitle: segment, at: type.numberOfSegments, animated: false)
+        }
+        
+        type.selectedSegmentIndex = 0 // Set default selection
     }
     
     // MARK: - UITextFieldDelegate
@@ -30,6 +39,7 @@ class EditIterable: KeyboardViewPushController, UITextFieldDelegate {
     @IBAction func onExit(_ sender: UITapGestureRecognizer) {
         if let name = name.text, let content = content.text {
             var array = content.components(separatedBy: " ").compactMap({ Int($0) })
+            var displayFormat = "[\(array.map{String($0)}.joined(separator: ", "))]"
             
             var step = 1, min = 0, max = array.count
             if type.selectedSegmentIndex == 1 && array.count < 4 { // as range
@@ -45,11 +55,12 @@ class EditIterable: KeyboardViewPushController, UITextFieldDelegate {
                     step = array[2]
                 }
                 
+                displayFormat = "range(\(min), \(max), \(step))"
                 array = Array(stride(from: min, to: max, by: step))
             }
             
             if array.count > 0 {
-                delegate.update(name: name, type: type.selectedSegmentIndex, content: array)
+                delegate.update(name: name, type: type.selectedSegmentIndex, displayFormat: displayFormat, content: array)
                 dismiss(animated: true, completion: nil)
             }
         }
