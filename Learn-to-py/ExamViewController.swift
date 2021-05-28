@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExamViewController: UIViewController {
+class ExamViewController: KeyboardViewPushController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
@@ -90,5 +90,15 @@ class ExamViewController: UIViewController {
     // MARK: - Navigation
     @IBAction func exit(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func getMoveAmount(keyboardSize: CGRect) -> CGFloat {
+        let maxY = self.view.superview!.frame.height - keyboardSize.height
+        let contentY = answer.superview!.convert(answer.frame.origin, to: nil).y + answer.frame.height + 20
+        
+        if (contentY > maxY) {
+            return contentY - maxY
+        }
+        return 0
     }
 }
