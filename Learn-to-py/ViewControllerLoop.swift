@@ -8,9 +8,11 @@
 import UIKit
 
 protocol AutoUpdate {
-    func update(name: String) // Variable update
+    func updateIterator(name: String) // Variable update
+    func updateIterable(name: String) // Variable update
     func update(snippet: CodeSnippet) // Snippet update
-    func update(name: String, type: Int, displayFormat: String, content: Array<Int>) // Iterable update
+    func update(type: Int, displayFormat: String, content: Array<Int>) // Iterable update
+    func refresh()
 }
 
 class ViewControllerLoop: UIViewController, AutoUpdate {
@@ -157,11 +159,15 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
     }
     
     // MARK: - AutoUpdate
-    func update(name: String) {
+    func updateIterator(name: String) {
         iterator.name = name
         iterator.value = 0
         
         refresh()
+    }
+    
+    func updateIterable(name: String) {
+        iterable.name = name
     }
     
     func update(snippet: CodeSnippet) {
@@ -170,13 +176,10 @@ class ViewControllerLoop: UIViewController, AutoUpdate {
         refresh()
     }
     
-    func update(name: String, type: Int, displayFormat: String, content: Array<Int>) {
-        iterable.name = name
+    func update(type: Int, displayFormat: String, content: Array<Int>) {
         iterable.value = content
         iterableDisplayFormat = displayFormat
         iterableType = type
-        
-        refresh()
     }
     
     // MARK: - Navigation

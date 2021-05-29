@@ -27,7 +27,7 @@ class EditVariable: KeyboardViewPushController, UITextFieldDelegate {
 
     @IBAction func onExit(_ sender: UITapGestureRecognizer) {
         if let name = name.text {
-            delegate.update(name: name)
+            delegate.updateIterator(name: name)
             dismiss(animated: true, completion: nil)
         }
     }
