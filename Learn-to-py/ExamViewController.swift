@@ -12,7 +12,6 @@ class ExamViewController: KeyboardViewPushController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var answer: UITextField!
-    @IBOutlet weak var status: UILabel!
     
     var result: ExamResult!
     var question: Int!
@@ -39,12 +38,21 @@ class ExamViewController: KeyboardViewPushController {
         if let guess = textoIngresado {
             if questions[question].isCorrect(guess: guess) {
                 result.correctAnswers += 1
-                status.text = "Su respuesta es correcta"
+                sender.setTitle("Correcto!", for: .normal)
             } else {
-                status.text = "Su respuesta es incorrecta"
+                sender.setTitle("Incorrecto!", for: .normal)
             }
             
+            sender.isEnabled = false
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                sender.isEnabled = true
+                sender.setTitle("Validar", for: .normal)
+            })
+            
+            answer.text = ""
             question += 1
+            
             if question == questions.count {
                 result.date = Date()
                 let alerta = UIAlertController(title: "Resultados", message: "Su calificación en este examen es de \(result.grade!)", preferredStyle: .alert)

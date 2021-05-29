@@ -8,6 +8,7 @@
 import Foundation
 
 class ForLoopTemplate: CodeTemplate {
+    var name: String = "for"
     
     func generateSteps(variablesOriginal: inout [Variable], snippet: CodeSnippet) -> [Step] {
         var steps: [Step] = []

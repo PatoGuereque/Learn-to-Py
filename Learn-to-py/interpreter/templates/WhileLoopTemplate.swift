@@ -8,6 +8,7 @@
 import Foundation
 
 class WhileLoopTemplate: CodeTemplate {
+    var name: String = "while"
     
     func generateSteps(variablesOriginal: inout [Variable], snippet: CodeSnippet) -> [Step] {
         var steps: [Step] = []
