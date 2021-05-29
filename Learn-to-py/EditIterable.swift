@@ -37,7 +37,13 @@ class EditIterable: KeyboardViewPushController, UITextFieldDelegate {
     }
     
     @IBAction func onExit(_ sender: UITapGestureRecognizer) {
-        if let name = name.text, let content = content.text {
+        var shouldRefresh = false
+        if let name = name.text {
+            delegate.updateIterable(name: name)
+            shouldRefresh = true
+        }
+        
+        if let content = content.text {
             var array = content.components(separatedBy: " ").compactMap({ Int($0) })
             var displayFormat = "[\(array.map{String($0)}.joined(separator: ", "))]"
             
@@ -55,14 +61,29 @@ class EditIterable: KeyboardViewPushController, UITextFieldDelegate {
                     step = array[2]
                 }
                 
-                displayFormat = "range(\(min), \(max), \(step))"
-                array = Array(stride(from: min, to: max, by: step))
+                if step != 0 {
+                    displayFormat = "range(\(min), \(max), \(step))"
+                    array = Array(stride(from: min, to: max, by: step))
+                } else {
+                    array = []
+                }
             }
             
             if array.count > 0 {
-                delegate.update(name: name, type: type.selectedSegmentIndex, displayFormat: displayFormat, content: array)
-                dismiss(animated: true, completion: nil)
+                delegate.update(type: type.selectedSegmentIndex, displayFormat: displayFormat, content: array)
+                shouldRefresh = true
+            } else if content.count > 0 {
+                let alerta = UIAlertController(title: "Error!", message: "Por favor ingrese un iterable válido", preferredStyle: .alert)
+                let accion = UIAlertAction(title: "Entendido", style: .cancel, handler: nil)
+                alerta.addAction(accion)
+                present(alerta, animated: true, completion: nil)
+                shouldRefresh = false
             }
+        }
+        
+        if shouldRefresh {
+            dismiss(animated: true, completion: nil)
+            delegate.refresh()
         }
     }
     
