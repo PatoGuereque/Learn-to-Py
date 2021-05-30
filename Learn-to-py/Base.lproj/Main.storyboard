@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -359,14 +359,6 @@ Logo Python: https://www.python.org/community/logos/</string>
                                             <constraint firstAttribute="trailing" secondItem="8Qw-Fz-Fhm" secondAttribute="trailing" constant="8" id="wJd-Xz-nqA"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="reset" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmb-EO-Qdk">
-                                        <rect key="frame" x="8" y="319" width="34" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="🔄"/>
-                                        <connections>
-                                            <action selector="onControlClick:" destination="gae-cn-Baq" eventType="touchUpInside" id="BWi-11-w0Y"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -376,14 +368,12 @@ Logo Python: https://www.python.org/community/logos/</string>
                                     <constraint firstItem="pZw-rx-eUW" firstAttribute="trailing" secondItem="xpW-Fv-muz" secondAttribute="trailing" id="H0n-t8-n9b"/>
                                     <constraint firstItem="pZw-rx-eUW" firstAttribute="top" secondItem="XgC-h2-wLF" secondAttribute="bottom" constant="32" id="Hvm-rJ-SUh"/>
                                     <constraint firstItem="xpW-Fv-muz" firstAttribute="top" secondItem="Owk-l0-syS" secondAttribute="bottom" constant="29" id="J00-r1-uds"/>
-                                    <constraint firstAttribute="bottom" secondItem="gmb-EO-Qdk" secondAttribute="bottom" constant="8" id="Jes-op-G2k"/>
                                     <constraint firstItem="pZw-rx-eUW" firstAttribute="leading" secondItem="XgC-h2-wLF" secondAttribute="leading" id="NfO-3U-Frx"/>
                                     <constraint firstItem="pZw-rx-eUW" firstAttribute="leading" secondItem="z00-np-jw9" secondAttribute="leading" constant="26" id="P1Z-c0-Pyp"/>
                                     <constraint firstItem="pZw-rx-eUW" firstAttribute="leading" secondItem="xpW-Fv-muz" secondAttribute="leading" id="ana-CZ-2Pf"/>
                                     <constraint firstItem="Owk-l0-syS" firstAttribute="leading" secondItem="z00-np-jw9" secondAttribute="leading" id="bEA-S9-T5O"/>
                                     <constraint firstItem="pZw-rx-eUW" firstAttribute="centerX" secondItem="z00-np-jw9" secondAttribute="centerX" id="fzP-mk-PfK"/>
                                     <constraint firstItem="XgC-h2-wLF" firstAttribute="top" secondItem="z00-np-jw9" secondAttribute="top" constant="141" id="i1e-WU-vp6"/>
-                                    <constraint firstItem="gmb-EO-Qdk" firstAttribute="leading" secondItem="z00-np-jw9" secondAttribute="leading" constant="8" id="qSB-5z-5qY"/>
                                     <constraint firstAttribute="bottom" secondItem="pZw-rx-eUW" secondAttribute="bottom" constant="14" id="v0S-lr-dSF"/>
                                     <constraint firstItem="pZw-rx-eUW" firstAttribute="top" secondItem="z00-np-jw9" secondAttribute="top" constant="211" id="xaR-Gp-XKq"/>
                                 </constraints>
@@ -485,7 +475,7 @@ Logo Python: https://www.python.org/community/logos/</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="T3H-co-I1S">
-                                        <rect key="frame" x="0.0" y="24.5" width="487" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="487" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T3H-co-I1S" id="7uK-n1-MKr">
                                             <rect key="frame" x="0.0" y="0.0" width="487" height="43.5"/>
